@@ -1,19 +1,11 @@
-import "./App.css";
-
-type Burro = {
-	nome: string;
-	idade: number;
-};
+import './App.css'
 
 function App() {
-	const henri: Burro = { nome: "henri", idade: 19 };
-
-	return (
-		<>
-			<p>{henri.nome}</p>
-      <p>{henri.idade}</p>
-		</>
-	);
+  return (
+    <div className="App">
+      <button className="btn btn-secondary"> teste</button>
+    </div>
+  )
 }
 
-export default App;
+export default App
