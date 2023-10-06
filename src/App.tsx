@@ -4,6 +4,7 @@ function App() {
   return (
     <div className="App">
       <button className="btn btn-secondary"> teste</button>
+      <h1>It works and you found me!</h1>
     </div>
   )
 }
