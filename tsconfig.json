@@ -18,8 +18,23 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "composite": true,
+    "allowSyntheticDefaultImports": true,
+    
+    "baseUrl": ".",
+    "paths": {
+      "~/assets/*": ["src/assets/*"],
+      "~/components/*": ["src/components/*"],
+      "~/features/*": ["src/features/*"],
+      "~/hooks/*": ["src/hooks/*"],
+      "~/interfaces/*": ["src/interfaces/*"],
+      "~/lib/*": ["src/lib/*"],
+      "~/pages/*": ["src/pages/*"],
+      "~/routes/*": ["src/routes/*"],
+      "~/services/*": ["src/services/*"],
+      "~/utils/*": ["src/utils/*"]
+    }
   },
-  "include": ["src", "stories"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["**/*.ts", "**/*.tsx", "stories"]
 }
