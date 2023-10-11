@@ -5,7 +5,10 @@ import Erro404 from '~/pages/404-error'
 import Home from '~/pages/home'
 
 import { catalogRoute } from './catalog'
+import { collectiveRoute } from './collective'
+import { historyRoute } from './history'
 import { lojaRoute } from './loja'
+import { supportRoute } from './support'
 
 export const routes = createBrowserRouter([
   {
@@ -18,6 +21,9 @@ export const routes = createBrowserRouter([
       },
       catalogRoute,
       lojaRoute,
+      collectiveRoute,
+      historyRoute,
+      supportRoute,
     ],
   },
   {
