@@ -1,4 +1,4 @@
-import { Outlet, RouteObject } from 'react-router-dom'
+import { RouteObject } from 'react-router-dom'
 
 import Catalog from '~/pages/catalog'
 
@@ -7,9 +7,6 @@ export const catalogRoute: RouteObject = {
   element: (
     <>
       <Catalog />
-      <div id="detail">
-        <Outlet />
-      </div>
     </>
   ),
 }
