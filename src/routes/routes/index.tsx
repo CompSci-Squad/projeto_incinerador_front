@@ -11,8 +11,8 @@ import { contactRoute } from './contact'
 import { contributeRoute } from './contribute'
 import { eventsRoute } from './events'
 import { historyRoute } from './history'
-import { lojaRoute } from './loja'
 import { newsRoute } from './news'
+import { storeRoute } from './store'
 import { supportRoute } from './support'
 
 export const routes = createBrowserRouter([
@@ -25,7 +25,7 @@ export const routes = createBrowserRouter([
         element: <Home />,
       },
       catalogRoute,
-      lojaRoute,
+      storeRoute,
       collectiveRoute,
       historyRoute,
       supportRoute,
