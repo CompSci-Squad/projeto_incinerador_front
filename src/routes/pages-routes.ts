@@ -8,4 +8,5 @@ export const ROUTES = {
   HISTORY: '/history',
   STORE: '/store',
   NEWS: '/news',
+  ABOUTUS: '/about-us',
 }
