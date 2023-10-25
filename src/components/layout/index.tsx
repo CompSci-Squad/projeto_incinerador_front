@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router-dom'
 
+import Header from '../Header'
+
 const Layout = () => {
   return (
     <>
-      <h1>Layout para o site inteiro</h1>
+      <Header />
       <Outlet />
     </>
   )
