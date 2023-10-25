@@ -1,12 +1,17 @@
 import { ROUTES } from '../../routes/pages-routes'
-import Button from '../Button'
+import LinkHeader from '../LinkHeader'
 
 const Header = () => {
   return (
     <header className="flex justify-between text-center px-6 py-6">
       <p>test</p>
       <section className="flex justify-between text-center">
-        <Button navigateTo={ROUTES.COLLECTIVE}>O Coletivo</Button>
+        <LinkHeader path={ROUTES.COLLECTIVE} title="O Coletivo" />
+        <LinkHeader path={ROUTES.HISTORY} title="História" />
+        <LinkHeader path={ROUTES.CONTRIBUTE} title="Apoie a usina" />
+        <LinkHeader path={ROUTES.STORE} title="Loja" />
+        <LinkHeader path={ROUTES.EVENTS} title="Eventos" />
+        <LinkHeader path={ROUTES.NEWS} title="notícias" />
       </section>
     </header>
   )
