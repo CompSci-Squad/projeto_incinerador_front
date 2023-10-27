@@ -1,4 +1,5 @@
-import { ROUTES } from '../../routes/pages-routes'
+import { ROUTES } from '~/routes/pages-routes'
+
 import LinkHeader from '../LinkHeader'
 
 const Header = () => {

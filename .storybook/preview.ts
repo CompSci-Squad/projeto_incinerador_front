@@ -1,6 +1,9 @@
+import '../src/index.css'
 import type { Preview } from '@storybook/react'
 
-const preview: Preview = {
+import { withRouter } from 'storybook-addon-react-router-v6'
+
+export const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
@@ -12,4 +15,7 @@ const preview: Preview = {
   },
 }
 
-export default preview
+export const decorators = [
+  withRouter
+]
+
