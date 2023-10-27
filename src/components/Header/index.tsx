@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="flex justify-between p-6 text-center">
       <p>test</p>
-      <section className="flex justify-between text-center">
+      <nav className="flex justify-between text-center">
         <LinkHeader path={ROUTES.COLLECTIVE} title="O Coletivo" />
         <LinkHeader path={ROUTES.HISTORY} title="História" />
         <LinkHeader path={ROUTES.CONTRIBUTE} title="Apoie a usina" />
@@ -13,7 +13,7 @@ const Header = () => {
         <LinkHeader path={ROUTES.EVENTS} title="Eventos" />
         <LinkHeader path={ROUTES.NEWS} title="notícias" />
         <LinkHeader path={ROUTES.CONTACT} title="fale conosco" />
-      </section>
+      </nav>
     </header>
   )
 }
