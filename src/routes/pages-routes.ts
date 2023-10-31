@@ -2,10 +2,11 @@ export const ROUTES = {
   HOME: '/',
   COLLECTIVE: '/collective',
   ABOUT: '/about',
-  CATALOG: '/catalog',
   CONTACT: '/contact',
-  CONTRIBUTE: '/CONTRIBUTE',
+  CONTRIBUTE: '/contribute',
   EVENTS: '/events',
   HISTORY: '/history',
   STORE: '/store',
+  NEWS: '/news',
+  ABOUTUS: '/about-us',
 }

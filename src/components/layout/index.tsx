@@ -1,11 +1,15 @@
 import { Outlet } from 'react-router-dom'
 
+import Footer from '../Footer'
+import Header from '../Header'
+
 const Layout = () => {
   return (
-    <>
-      <h1>Layout para o site inteiro</h1>
+    <main className="bg-eco_white">
+      <Header />
       <Outlet />
-    </>
+      <Footer />
+    </main>
   )
 }
 
