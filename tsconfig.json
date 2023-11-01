@@ -34,7 +34,8 @@
       "~/pages/*": ["src/pages/*"],
       "~/routes/*": ["src/routes/*"],
       "~/services/*": ["src/services/*"],
-      "~/utils/*": ["src/utils/*"]
+      "~/utils/*": ["src/utils/*"],
+      "~/content/*": ["src/content/*"],
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts"],
