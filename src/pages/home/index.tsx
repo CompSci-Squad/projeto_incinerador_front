@@ -1,6 +1,8 @@
 import Banner from '~/components/Banner'
-import Colective_Sec from '~/components/Colective_Sec'
+import HomeSection from '~/components/HomeSection'
 import Test from '~/content/index.mdx'
+
+import { ROUTES } from '../../routes/pages-routes'
 
 const Home = () => {
   return (
@@ -8,7 +10,41 @@ const Home = () => {
       <Banner />
       <h1>It works and you found me!</h1>
       <Test />
-      <Colective_Sec />
+      <section className="flex justify-around pb-6">
+        <HomeSection
+          title="sexo"
+          path={ROUTES.COLLECTIVE}
+          text="Ola mundo, isso é um test"
+          image="/images/cachorro_arabe.jpeg"
+        />
+        <HomeSection
+          title="sexo"
+          text="Ola mundo, isso é um test"
+          image="/images/cachorro_arabe.jpeg"
+        />
+        <HomeSection
+          title="sexo"
+          text="Ola mundo, isso é um test"
+          image="/images/cachorro_arabe.jpeg"
+        />
+      </section>
+      <section className="flex justify-around">
+        <HomeSection
+          title="sexo"
+          text="Ola mundo, isso é um test"
+          image="/images/cachorro_arabe.jpeg"
+        />
+        <HomeSection
+          title="sexo"
+          text="Ola mundo, isso é um test"
+          image="/images/cachorro_arabe.jpeg"
+        />
+        <HomeSection
+          title="sexo"
+          text="Ola mundo, isso é um test"
+          image="/images/cachorro_arabe.jpeg"
+        />
+      </section>
     </main>
   )
 }
