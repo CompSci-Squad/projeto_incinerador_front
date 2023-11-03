@@ -1,6 +1,6 @@
 import { ROUTES } from '~/routes/pages-routes'
 
-import LinkHeader from '../LinkHeader'
+import LinkHeader from './LinkHeader'
 
 const Header = () => {
   return (

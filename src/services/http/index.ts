@@ -17,7 +17,7 @@ export const instance = axios.create({
   },
 })
 
-export class HttpService {
+class HttpService {
   public async get<Response>({ url }: RequestNoData) {
     const response = await instance.get<Response>(url)
 

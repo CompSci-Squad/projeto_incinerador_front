@@ -1,7 +1,8 @@
 import dayjs from 'dayjs'
 
-import { ROUTES } from '../../routes/pages-routes'
-import LinkFooter from '../LinkFooter'
+import { ROUTES } from '~/routes/pages-routes'
+
+import LinkFooter from './LinkFooter'
 
 const Footer = () => {
   const year = dayjs().get('year')

@@ -1,5 +1,20 @@
+import { useSearchParams } from 'react-router-dom'
+import { useProductsLoader } from '~/features/store/store.loader'
+
 const Store = () => {
-  return <h1>esta é a nossa loja</h1>
+  const [searchParams, setSearchParams] = useSearchParams()
+  const { products } = useProductsLoader()
+  const { data } = products
+  return (
+    <main>
+      <div className="join">
+        <button className="join-item btn">1</button>
+        <button className="join-item btn btn-active">2</button>
+        <button className="join-item btn">3</button>
+        <button className="join-item btn">4</button>
+      </div>
+    </main>
+  )
 }
 
 export default Store
