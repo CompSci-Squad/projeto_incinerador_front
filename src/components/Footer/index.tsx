@@ -14,8 +14,12 @@ const Footer = () => {
         <LinkFooter path={ROUTES.EVENTS} title="Eventos" />
         <LinkFooter path={ROUTES.CONTACT} title="Fale conosco" />
       </section>
-      <section className="flex flex-col items-center justify-center py-2">
-        <p>Criado por alunos de Ciência Da Computação do I.M.T.</p>
+      <section className="flex flex-col items-center justify-center py-2 ">
+        <LinkFooter
+          styles="font-normal"
+          path={ROUTES.ABOUTUS}
+          title="Criado por alunos de Ciência Da Computação do I.M.T."
+        />
         <p>&#169; {year} Usina Eco Cultural</p>
       </section>
     </footer>
