@@ -18,8 +18,8 @@ export const instance = axios.create({
 })
 
 class HttpService {
-  public async get<Response>({ url }: RequestNoData) {
-    const response = await instance.get<Response>(url)
+  public async get<Response>({ url, params }: RequestNoData) {
+    const response = await instance.get<Response>(url, { params })
 
     return response
   }

@@ -1,7 +1,7 @@
 import Banner from '~/pages/home/components/Banner'
-import HomeSection from '~/pages/home/HomeSection'
 import { ROUTES } from '~/routes/pages-routes'
 
+import HomeSection from './components/HomeSection/'
 import CollectiveText, {
   frontmatter as collectiveFrontmatter,
 } from './content/collective.mdx'
