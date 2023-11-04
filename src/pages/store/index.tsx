@@ -1,19 +1,13 @@
-import { useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
-
 import { useProductsLoader } from '~/features/store/store.loader'
-import { useNavigateParams } from '~/hooks/useNavigateParams'
 
-import Pagination from './components/Pagination'
+import { useNavigateParams } from '../../hooks/useNavigateParams'
+import { ROUTES } from '../../routes/pages-routes'
+import { Link } from 'react-router-dom'
 
 const Store = () => {
   const navigate = useNavigateParams()
-  const [pageNum, setPageNum] = useState<number>(1)
-  const [searchParams, setSearchParams] = useSearchParams()
   const { products } = useProductsLoader()
-  const { data, headers } = products
-  const pages = headers['x-total-count'] / 8
-  const setPage = () => {}
+  const { data } = products
   return (
     <main>
       <section className="grid grid-cols-4 grid-rows-2 gap-4 p-6">
@@ -31,21 +25,12 @@ const Store = () => {
               <span className="basis-full">{description}</span>
               <span>{`R$${price}`}</span>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">por enquanto nada</button>
+                <Link to={ROUTES.STORE.DETAILS(id)}>teste</Link>
               </div>
             </div>
           </div>
         ))}
       </section>
-      <div className=" join flex items-center justify-center">
-        <Pagination
-          page={}
-          totalPages={pages}
-          nextPage={pageNum + 1}
-          prevPage={0}
-          hasNextPage={true}
-        />
-      </div>
     </main>
   )
 }

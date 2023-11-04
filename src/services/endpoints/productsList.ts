@@ -1,9 +1,17 @@
 import { Product } from '~/interfaces/store/product.interface'
 
 import HttpService from '../http'
+import { endpoint } from './endpoints'
 
-export const productsList = async () => {
+export const productsList = async ({ params }: any) => {
   return await HttpService.get<Array<Product>>({
-    url: `${import.meta.env.VITE_BASE_URL}/products?_page=1&_limit=8`,
+    url: endpoint.PRODUCT.LIST(),
+    params,
+  })
+}
+
+export const getProduct = async (id: string) => {
+  return await HttpService.get<Product>({
+    url: endpoint.PRODUCT.ONE(id),
   })
 }

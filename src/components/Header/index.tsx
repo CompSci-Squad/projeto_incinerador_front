@@ -10,7 +10,7 @@ const Header = () => {
         <LinkHeader path={ROUTES.COLLECTIVE} title="O Coletivo" />
         <LinkHeader path={ROUTES.HISTORY} title="História" />
         <LinkHeader path={ROUTES.CONTRIBUTE} title="Apoie a usina" />
-        <LinkHeader path={ROUTES.STORE} title="Loja" />
+        <LinkHeader path={ROUTES.STORE.HOME} title="Loja" />
         <LinkHeader path={ROUTES.EVENTS} title="Eventos" />
         <LinkHeader path={ROUTES.NEWS} title="notícias" />
         <LinkHeader path={ROUTES.CONTACT} title="fale conosco" />

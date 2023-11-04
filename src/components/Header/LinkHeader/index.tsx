@@ -9,6 +9,8 @@ type LinkHeaderProps = {
 const LinkHeader: React.FC<LinkHeaderProps> = ({ path, title }) => {
   const location = useLocation()
 
+  console.log(location)
+  console.log(path)
   return (
     <Link
       to={path}

@@ -10,7 +10,7 @@ interface RequestWithData<Data> extends RequestNoData {
 }
 
 export const instance = axios.create({
-  baseURL: import.meta.env.VITE_APP_API_URL,
+  baseURL: import.meta.env.VITE_BASE_URL,
   headers: {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': '*',

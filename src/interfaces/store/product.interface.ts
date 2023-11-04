@@ -4,6 +4,10 @@ export interface ProductsLoader {
   products: AxiosResponse<Array<Product>>
 }
 
+export interface ProductLoader {
+  product: AxiosResponse<Product>
+}
+
 export interface Product {
   id: string
   title: string

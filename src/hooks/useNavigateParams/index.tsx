@@ -11,10 +11,10 @@ export const useNavigateParams = () => {
   const limit = searchParams.get('limit') || '8'
   const page = searchParams.get('page') || '1'
 
-  return (path: string) => {
+  return (path: string, params?: any) => {
     navigate({
       pathname: path,
-      search: createSearchParams({ limit, page }).toString(),
+      search: createSearchParams({ limit, page, ...params }).toString(),
     })
   }
 }

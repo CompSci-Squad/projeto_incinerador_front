@@ -1,0 +1,1 @@
+add pagination, create product detail page
