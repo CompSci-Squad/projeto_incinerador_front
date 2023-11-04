@@ -1,15 +1,19 @@
+import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
 import { useProductsLoader } from '~/features/store/store.loader'
 import { useNavigateParams } from '~/hooks/useNavigateParams'
 
-import PaginationButton from './components/PageButton'
+import Pagination from './components/Pagination'
 
 const Store = () => {
   const navigate = useNavigateParams()
+  const [pageNum, setPageNum] = useState<number>(1)
   const [searchParams, setSearchParams] = useSearchParams()
   const { products } = useProductsLoader()
-  const { data } = products
+  const { data, headers } = products
+  const pages = headers['x-total-count'] / 8
+  const setPage = () => {}
   return (
     <main>
       <section className="grid grid-cols-4 grid-rows-2 gap-4 p-6">
@@ -34,7 +38,13 @@ const Store = () => {
         ))}
       </section>
       <div className=" join flex items-center justify-center">
-        <PaginationButton number="3" />
+        <Pagination
+          page={}
+          totalPages={pages}
+          nextPage={pageNum + 1}
+          prevPage={0}
+          hasNextPage={true}
+        />
       </div>
     </main>
   )

@@ -1,11 +1,21 @@
 type PaginationProps = {
-  number: string
+  pageNumber: number
+  isActive: boolean
 }
 
-const PaginationButton: React.FC<PaginationProps> = ({ number }) => {
+const PaginationButton: React.FC<PaginationProps> = ({
+  pageNumber,
+  isActive,
+}) => {
   return (
-    <button className="hover btn join-item btn-xs hover:bg-eco_green">
-      {number}
+    <button
+      className={
+        isActive === true
+          ? 'hover btn join-item btn-xs hover:bg-eco_green'
+          : 'btn join-item bg-eco_green'
+      }
+    >
+      {pageNumber}
     </button>
   )
 }
