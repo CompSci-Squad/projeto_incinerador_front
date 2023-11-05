@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <main>
       <Banner />
-      <section className="flex justify-around py-6">
+      <section className="grid grid-cols-3 grid-rows-2 py-6">
         <HomeSection
           title={collectiveFrontmatter.title}
           path={ROUTES.COLLECTIVE}
@@ -28,8 +28,6 @@ const Home = () => {
           path={ROUTES.CONTRIBUTE}
           image="/images/cachorro_arabe.jpeg"
         ></HomeSection>
-      </section>
-      <section className="flex justify-around py-6">
         <HomeSection
           title="Loja"
           path={ROUTES.STORE}
