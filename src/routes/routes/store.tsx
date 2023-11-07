@@ -6,14 +6,12 @@ import ProductDetails from '~/pages/store/components/ProductDetails'
 
 export const storeRoute: RouteObject = {
   path: 'store',
-  element: (
-    <>
-      <Store />
-      <Outlet />
-    </>
-  ),
-  loader: productsLoader,
   children: [
+    {
+      index: true,
+      element: <Store />,
+      loader: productsLoader,
+    },
     {
       path: 'details/:id',
       element: (
