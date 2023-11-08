@@ -9,4 +9,6 @@ export enum ROUTES {
   STORE = '/store',
   NEWS = '/news',
   ABOUTUS = '/about-us',
+  COLLECTIVES1 = '/collective-s1',
+  COLLECTIVES2 = '/collective-s2',
 }
