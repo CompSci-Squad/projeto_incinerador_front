@@ -29,15 +29,15 @@ const ProductDetails = () => {
                 <img src={mainImage} alt="" className="h-80 w-80 rounded-2xl" />
                 <section className="flex flex-row gap-4 lg:flex-col">
                   {data.images.map((image) => (
-                    <button
-                      key={image}
-                      className="hover:border-2 hover:border-eco_green rounded-2xl"
-                      onClick={() => handleOnClick(image)}
-                    >
+                    <button key={image} onClick={() => handleOnClick(image)}>
                       <img
                         src={image}
                         alt=""
-                        className="rounded-2xl h-24 w-24"
+                        className={
+                          image === mainImage
+                            ? 'h-24 w-24 rounded-2xl border-2 border-eco_green'
+                            : 'h-24 w-24 rounded-2xl hover:border-2 hover:border-eco_green'
+                        }
                       />
                     </button>
                   ))}
