@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom'
 
-import { ROUTES } from '~/routes/pages-routes'
-
 type HomeSectionProps = {
   title: string
   image: string
-  path: ROUTES
+  path: string
   children: React.ReactNode
 }
 

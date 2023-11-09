@@ -27,7 +27,7 @@ export const useProductsLoader = () => {
 export const productLoader = async ({ params }: LoaderFunctionArgs) => {
   const { id } = params
 
-  const product = getProduct(id as string)
+  const product = await getProduct(id as string)
 
   return defer({ product })
 }
