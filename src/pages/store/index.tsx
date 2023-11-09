@@ -12,7 +12,7 @@ const Store = () => {
   const { products } = useProductsLoader()
   const { data } = products
   return (
-    <main className="h-screen">
+    <main>
       <h1 className="py-10 text-center text-4xl font-bold">Loja</h1>
       <section className="flex items-center justify-center gap-10 py-10">
         <img src={storeFrontmatter.image} alt="" className="rounded-2xl" />
@@ -25,11 +25,11 @@ const Store = () => {
       >
         {(data) => (
           <section className="grid grid-cols-4 grid-rows-2 gap-4 p-6">
-            {data.map(({ id, title, mainImage, price, description }) => (
+            {data.map(({ id, title, images, price, description }) => (
               <div key={id} className="card m-4 shadow-xl">
                 <figure>
                   <img
-                    src={mainImage}
+                    src={images[0]}
                     loading="eager"
                     alt={`imagem do produto ${title}`}
                     className="h-52 w-52 rounded-2xl"

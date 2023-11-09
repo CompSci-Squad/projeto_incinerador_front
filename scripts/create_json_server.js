@@ -8,8 +8,8 @@ function createProduct() {
     title: faker.commerce.productName(),
     price: faker.commerce.price(),
     description: faker.commerce.productDescription(),
-    mainImage: faker.image.urlLoremFlickr(),
     images: [
+      faker.image.urlLoremFlickr(),
       faker.image.urlLoremFlickr(),
       faker.image.urlLoremFlickr(),
       faker.image.urlLoremFlickr(),

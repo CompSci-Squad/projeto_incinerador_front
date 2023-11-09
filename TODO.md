@@ -1,1 +1,1 @@
-add pagination, create product detail page
+add pagination, add active hover for image on product detail

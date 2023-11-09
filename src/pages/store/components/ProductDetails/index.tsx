@@ -1,9 +1,17 @@
+import { useState } from 'react'
+
 import Loader from '~/components/Loader'
 import { useProductLoader } from '~/features/store/store.loader'
 
 const ProductDetails = () => {
   const { product } = useProductLoader()
   const { data } = product
+  const [mainImage, setMainImage] = useState(data.images[0])
+
+  const handleOnClick = (image: string) => {
+    setMainImage(image)
+  }
+
   return (
     <main>
       <Loader
@@ -18,19 +26,20 @@ const ProductDetails = () => {
                 {data.title}
               </h1>
               <div className="flex flex-col items-center justify-center gap-10 lg:flex-row">
-                <img
-                  src={data.mainImage}
-                  alt=""
-                  className="h-80 w-80 rounded-2xl"
-                />
+                <img src={mainImage} alt="" className="h-80 w-80 rounded-2xl" />
                 <section className="flex flex-row gap-4 lg:flex-col">
                   {data.images.map((image) => (
-                    <img
+                    <button
                       key={image}
-                      src={image}
-                      alt=""
-                      className="h-24 w-24 rounded-2xl"
-                    />
+                      className="hover:border-2 hover:border-eco_green rounded-2xl"
+                      onClick={() => handleOnClick(image)}
+                    >
+                      <img
+                        src={image}
+                        alt=""
+                        className="rounded-2xl h-24 w-24"
+                      />
+                    </button>
                   ))}
                 </section>
               </div>
@@ -42,7 +51,7 @@ const ProductDetails = () => {
               </div>
               <div className="flex flex-col items-center justify-center lg:flex-row lg:items-start">
                 <span className="px-4 font-semibold">Preço:</span>
-                <span className="">R${data.price}</span>
+                <span>R${data.price}</span>
               </div>
             </div>
           </section>
