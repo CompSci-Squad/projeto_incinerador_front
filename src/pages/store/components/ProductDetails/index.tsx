@@ -1,7 +1,11 @@
 import { useState } from 'react'
 
 import Loader from '~/components/Loader'
+import Loading from '~/components/Loading'
+import RequestError from '~/components/RequestError'
+import ReturnButton from '~/components/ReturnButton'
 import { useProductLoader } from '~/features/store/store.loader'
+import { ROUTES } from '~/routes/pages-routes'
 
 const ProductDetails = () => {
   const { product } = useProductLoader()
@@ -14,11 +18,8 @@ const ProductDetails = () => {
 
   return (
     <main>
-      <Loader
-        resolve={data}
-        loading={<h1>ja faço</h1>}
-        error={<h1>ja faço</h1>}
-      >
+      <ReturnButton path={ROUTES.STORE.HOME} />
+      <Loader resolve={data} loading={<Loading />} error={<RequestError />}>
         {(data) => (
           <section>
             <div className="flex flex-col">
