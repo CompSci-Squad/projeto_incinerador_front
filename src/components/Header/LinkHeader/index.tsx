@@ -9,6 +9,8 @@ type LinkHeaderProps = {
 const LinkHeader: React.FC<LinkHeaderProps> = ({ path, title }) => {
   const location = useLocation()
 
+  console.log(location)
+  console.log(path)
   return (
     <Link
       to={path}
@@ -18,7 +20,7 @@ const LinkHeader: React.FC<LinkHeaderProps> = ({ path, title }) => {
           rounded-full
           border-none
         ${
-          location.pathname === path
+          location.pathname.includes(path)
             ? 'bg-eco_blue text-eco_white hover:bg-sky-700'
             : 'bg-eco_white hover:bg-gray-300'
         }`,

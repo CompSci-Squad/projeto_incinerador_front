@@ -1,19 +1,17 @@
 import { Link } from 'react-router-dom'
 
-import { ROUTES } from '~/routes/pages-routes'
-
 type HomeSectionProps = {
   title: string
   image: string
-  text: string
-  path: ROUTES
+  path: string
+  children: React.ReactNode
 }
 
 const HomeSection: React.FC<HomeSectionProps> = ({
   title,
   image,
-  text,
   path,
+  children,
 }) => {
   return (
     <Link
@@ -25,7 +23,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({
         <figure className="px-10 pt-4">
           <img src={image} className="rounded-xl" />
         </figure>
-        <p>{text}</p>
+        {children}
       </div>
     </Link>
   )
