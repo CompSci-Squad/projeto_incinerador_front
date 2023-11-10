@@ -1,6 +1,10 @@
 export const ROUTES = {
   HOME: '/',
-  COLLECTIVE: '/collective',
+  COLLECTIVE: {
+    HOME: '/collective',
+    PROPOSALS: '/collective/proposals',
+    ORIGIN: '/collective/origin',
+  },
   ABOUT: '/about',
   CONTACT: '/contact',
   CONTRIBUTE: '/contribute',
