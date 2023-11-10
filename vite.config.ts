@@ -14,6 +14,7 @@ export default defineConfig({
     tsconfigPaths(),
     mdx({
       remarkPlugins: [remarkFrontMatter, remarkFrontMatterMdx],
+      stylePropertyNameCase: 'css',
     }),
   ],
   test: {

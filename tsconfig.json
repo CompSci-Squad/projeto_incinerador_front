@@ -35,9 +35,9 @@
       "~/routes/*": ["src/routes/*"],
       "~/services/*": ["src/services/*"],
       "~/utils/*": ["src/utils/*"],
-      "~/content/*": ["src/content/*"],
+      "~/content/*": ["src/content/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts", "types/*"],
 
 }
