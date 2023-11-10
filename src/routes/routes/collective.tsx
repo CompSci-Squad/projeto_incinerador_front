@@ -16,7 +16,7 @@ export const collectiveRoute: RouteObject = {
       element: <Origin />,
     },
     {
-      path: 'proporsals',
+      path: 'proposals',
       element: <Proposals />,
     },
   ],
