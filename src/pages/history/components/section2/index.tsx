@@ -1,5 +1,9 @@
 const Section2 = () => {
-  return <main>test do section2</main>
+  return (
+    <main>
+      <div className="flex justify-center text-xl font-black">Sessão 2</div>
+    </main>
+  )
 }
 
 export default Section2

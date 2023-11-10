@@ -1,5 +1,10 @@
 const Origin = () => {
-  return <main>test do origin</main>
+  return (
+    <main>
+      <div className="flex justify-center text-xl font-black">Origem</div>
+      <section></section>
+    </main>
+  )
 }
 
 export default Origin

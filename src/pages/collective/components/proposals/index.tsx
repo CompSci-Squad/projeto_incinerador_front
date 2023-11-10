@@ -1,5 +1,9 @@
 const Proposals = () => {
-  return <main>test do proposals</main>
+  return (
+    <main>
+      <div className="flex justify-center text-xl font-black">Propostas</div>
+    </main>
+  )
 }
 
 export default Proposals
