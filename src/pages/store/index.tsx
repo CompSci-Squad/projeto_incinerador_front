@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom'
-
 import Loader from '~/components/Loader'
 import { useProductsLoader } from '~/features/store/store.loader'
 
 import ReturnButton from '../../components/ReturnButton'
 import { ROUTES } from '../../routes/pages-routes'
+import StoreCard from './components/StoreCard'
 import StoreContent, {
   frontmatter as storeFrontmatter,
 } from './content/store.mdx'
@@ -28,29 +27,14 @@ const Store = () => {
         {(data) => (
           <section className="grid grid-cols-4 grid-rows-2 gap-4 p-6">
             {data.map(({ id, title, images, price, description }) => (
-              <div key={id} className="card m-4 shadow-xl">
-                <figure>
-                  <img
-                    src={images[0]}
-                    loading="eager"
-                    alt={`imagem do produto ${title}`}
-                    className="h-52 w-52 rounded-2xl"
-                  />
-                </figure>
-                <div className="card-body gap-6">
-                  <h3 className="card-title">{title}</h3>
-                  <span className="basis-full">{description}</span>
-                  <span>{`R$${price}`}</span>
-                  <div className="card-actions justify-end">
-                    <Link
-                      to={ROUTES.STORE.DETAILS(id)}
-                      className="btn bg-eco_green text-eco_white hover:bg-eco_green_hover"
-                    >
-                      Saiba Mais
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <StoreCard
+                id={id}
+                title={title}
+                images={images}
+                description={description}
+                price={price}
+                key={id}
+              />
             ))}
           </section>
         )}

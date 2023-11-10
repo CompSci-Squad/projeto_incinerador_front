@@ -1,4 +1,4 @@
-import { Outlet, RouteObject } from 'react-router-dom'
+import { RouteObject } from 'react-router-dom'
 
 import { productLoader, productsLoader } from '~/features/store/store.loader'
 import Store from '~/pages/store'
@@ -14,12 +14,7 @@ export const storeRoute: RouteObject = {
     },
     {
       path: 'details/:id',
-      element: (
-        <>
-          <ProductDetails />
-          <Outlet />
-        </>
-      ),
+      element: <ProductDetails />,
       loader: productLoader,
     },
   ],
