@@ -1,6 +1,10 @@
 export const ROUTES = {
   HOME: '/',
-  COLLECTIVE: '/collective',
+  COLLECTIVE: {
+    HOME: '/collective',
+    PROPOSALS: '/collective/proposals',
+    ORIGIN: '/collective/origin',
+  },
   ABOUT: '/about',
   CONTACT: '/contact',
   CONTRIBUTE: '/contribute',
@@ -12,6 +16,4 @@ export const ROUTES = {
   },
   NEWS: '/news',
   ABOUTUS: '/about-us',
-  COLLECTIVES1: '/collective-s1',
-  COLLECTIVES2: '/collective-s2',
 }

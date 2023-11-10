@@ -9,8 +9,7 @@ function createProduct() {
     price: faker.commerce.price(),
     description: faker.commerce.productDescription(),
     images: [
-      faker.image.urlLoremFlickr(),
-      faker.image.urlLoremFlickr(),
+      faker.image.urlPicsumPhotos(),
       faker.image.urlLoremFlickr(),
       faker.image.urlLoremFlickr(),
     ],

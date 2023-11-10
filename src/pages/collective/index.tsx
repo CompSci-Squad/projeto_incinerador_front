@@ -1,6 +1,11 @@
-import CollectiveSection from '~/components/CollectiveSection'
-
 import { ROUTES } from '../../routes/pages-routes'
+import CollectiveSection from './components/CollectiveSection'
+import OriginText, {
+  frontmatter as originFrontmatter,
+} from './content/collectiveSection1.mdx'
+import ProposalsText, {
+  frontmatter as proposalsFrontmatter,
+} from './content/collectiveSection2.mdx'
 
 const Collective = () => {
   return (
@@ -8,17 +13,19 @@ const Collective = () => {
       <div className="flex justify-center text-xl font-black">O Coletivo</div>
       <section className="flex justify-around py-6">
         <CollectiveSection
-          title="Sessão 1"
-          path={ROUTES.COLLECTIVES1}
-          text="Texto sobre o que terá na sessão 1"
-          image="/images/cachorro_arabe.jpeg"
-        />
+          title={originFrontmatter.title}
+          path={ROUTES.COLLECTIVE.ORIGIN}
+          image={originFrontmatter.image}
+        >
+          <OriginText />
+        </CollectiveSection>
         <CollectiveSection
-          title="Sessão 2"
-          path={ROUTES.COLLECTIVES2}
-          text="Texto sobre o que terá na sessão 2"
-          image="/images/cachorro_arabe.jpeg"
-        />
+          title={proposalsFrontmatter.title}
+          path={ROUTES.COLLECTIVE.PROPOSALS}
+          image={proposalsFrontmatter.image}
+        >
+          <ProposalsText />
+        </CollectiveSection>
       </section>
     </main>
   )

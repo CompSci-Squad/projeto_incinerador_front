@@ -1,18 +1,16 @@
 import { Link } from 'react-router-dom'
 
-import { ROUTES } from '~/routes/pages-routes'
-
 type CollectiveSectionProps = {
   title: string
   image: string
-  text: string
-  path: ROUTES
+  children: React.ReactNode
+  path: string
 }
 
 const CollectiveSection: React.FC<CollectiveSectionProps> = ({
   title,
   image,
-  text,
+  children,
   path,
 }) => {
   return (
@@ -25,7 +23,7 @@ const CollectiveSection: React.FC<CollectiveSectionProps> = ({
         <figure className="px-10 pt-4">
           <img src={image} className="rounded-xl" />
         </figure>
-        <p>{text}</p>
+        {children}
       </div>
     </Link>
   )
