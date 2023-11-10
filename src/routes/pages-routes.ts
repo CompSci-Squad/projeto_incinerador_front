@@ -9,7 +9,11 @@ export const ROUTES = {
   CONTACT: '/contact',
   CONTRIBUTE: '/contribute',
   EVENTS: '/events',
-  HISTORY: '/history',
+  HISTORY: {
+    HOME: '/history',
+    SECTION1: '/history/section1',
+    SECTION2: '/history/section2',
+  },
   STORE: {
     HOME: '/store',
     DETAILS: (id: string) => `/store/details/${id}`,
