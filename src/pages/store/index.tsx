@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Loader from '~/components/Loader'
 import { useProductsLoader } from '~/features/store/store.loader'
 
+import ReturnButton from '../../components/ReturnButton'
 import { ROUTES } from '../../routes/pages-routes'
 import StoreContent, {
   frontmatter as storeFrontmatter,
@@ -13,6 +14,7 @@ const Store = () => {
   const { data } = products
   return (
     <main>
+      <ReturnButton path={ROUTES.HOME} />
       <h1 className="py-10 text-center text-4xl font-bold">Loja</h1>
       <section className="flex items-center justify-center gap-10 py-10">
         <img src={storeFrontmatter.image} alt="" className="rounded-2xl" />
