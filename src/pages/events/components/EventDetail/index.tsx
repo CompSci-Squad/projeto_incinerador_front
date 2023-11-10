@@ -12,13 +12,11 @@ const EventDetail = () => {
   return (
     <main>
       <ReturnButton path={ROUTES.EVENTS.HOME} />
-      <Loader
-        resolve={data}
-        loading={<Loading />}
-        error={<RequestError />}
-      >
+      <Loader resolve={data} loading={<Loading />} error={<RequestError />}>
         {(data) => (
-            
+          <div className="flex flex-col lg:flex-row">
+            <img src={data.image} alt="" />
+          </div>
         )}
       </Loader>
     </main>
