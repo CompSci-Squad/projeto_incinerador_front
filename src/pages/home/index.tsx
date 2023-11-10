@@ -13,14 +13,14 @@ const Home = () => {
       <section className="grid grid-cols-3 grid-rows-2 py-6">
         <HomeSection
           title={collectiveFrontmatter.title}
-          path={ROUTES.COLLECTIVE}
+          path={ROUTES.COLLECTIVE.HOME}
           image={collectiveFrontmatter.image}
         >
           <CollectiveText />
         </HomeSection>
         <HomeSection
           title="História"
-          path={ROUTES.HISTORY}
+          path={ROUTES.HISTORY.HOME}
           image="/images/cachorro_arabe.jpeg"
         ></HomeSection>
         <HomeSection

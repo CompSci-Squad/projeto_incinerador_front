@@ -8,7 +8,7 @@ const Header = () => {
       <p>test</p>
       <nav className="flex items-center justify-between gap-4 text-center">
         <LinkHeader path={ROUTES.COLLECTIVE.HOME} title="O Coletivo" />
-        <LinkHeader path={ROUTES.HISTORY} title="História" />
+        <LinkHeader path={ROUTES.HISTORY.HOME} title="História" />
         <LinkHeader path={ROUTES.CONTRIBUTE} title="Apoie a usina" />
         <LinkHeader path={ROUTES.STORE.HOME} title="Loja" />
         <LinkHeader path={ROUTES.EVENTS} title="Eventos" />
