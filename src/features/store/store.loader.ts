@@ -4,7 +4,7 @@ import {
   ProductLoader,
   ProductsLoader,
 } from '~/interfaces/store/product.interface'
-import { getProduct, productsList } from '~/services/endpoints/productsList'
+import { getProduct, productsList } from '~/services/endpoints/products'
 
 export const productsLoader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url)
