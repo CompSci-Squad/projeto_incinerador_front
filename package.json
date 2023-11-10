@@ -12,7 +12,8 @@
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "populate": "node scripts/create_json_server.js"
+    "populate": "node scripts/create_json_server.js",
+    "mock-server": "json-server --watch db.json"
   },
   "dependencies": {
     "axios": "^1.5.1",
@@ -21,6 +22,7 @@
     "json-server": "^0.17.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
     "react-router-dom": "^6.16.0",
     "tailwind-merge": "^1.14.0",
     "vite-tsconfig-paths": "^4.2.1"

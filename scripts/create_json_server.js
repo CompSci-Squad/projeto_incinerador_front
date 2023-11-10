@@ -8,8 +8,8 @@ function createProduct() {
     title: faker.commerce.productName(),
     price: faker.commerce.price(),
     description: faker.commerce.productDescription(),
-    mainImage: faker.image.urlLoremFlickr(),
     images: [
+      faker.image.urlLoremFlickr(),
       faker.image.urlLoremFlickr(),
       faker.image.urlLoremFlickr(),
       faker.image.urlLoremFlickr(),
@@ -37,7 +37,7 @@ const json = {
   events: []
 }
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 64; i++) {
   json.products.push(createProduct())
   json.events.push(createEvent())
 }
