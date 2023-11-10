@@ -1,5 +1,9 @@
 const News = () => {
-  return <h1>It works and you found me!</h1>
+  return (
+    <main>
+      <div className="flex justify-center text-xl font-black">Notícias</div>
+    </main>
+  )
 }
 
 export default News

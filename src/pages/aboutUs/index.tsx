@@ -1,5 +1,11 @@
 const AboutUs = () => {
-  return <h1>Sobre os devs</h1>
+  return (
+    <main>
+      <div className="flex justify-center text-xl font-black">
+        Desenvolvedores
+      </div>
+    </main>
+  )
 }
 
 export default AboutUs

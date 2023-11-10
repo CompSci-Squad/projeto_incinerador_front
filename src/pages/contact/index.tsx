@@ -1,5 +1,9 @@
 const Contact = () => {
-  return <h1>It works and you found me!</h1>
+  return (
+    <main>
+      <div className="flex justify-center text-xl font-black">Fale Conosco</div>
+    </main>
+  )
 }
 
 export default Contact
