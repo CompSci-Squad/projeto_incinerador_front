@@ -44,7 +44,7 @@ const EventCard: React.FC<EventCardProps> = ({
         </div>
         <div className="card-actions justify-end">
           <Link
-            to={ROUTES.STORE.DETAILS(id)}
+            to={ROUTES.EVENTS.DETAILS(id)}
             className="btn bg-eco_green text-eco_white hover:bg-eco_green_hover"
           >
             Saiba Mais

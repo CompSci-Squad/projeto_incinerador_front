@@ -35,7 +35,7 @@ const Home = () => {
         ></HomeSection>
         <HomeSection
           title="Eventos"
-          path={ROUTES.EVENTS}
+          path={ROUTES.EVENTS.HOME}
           image="/images/cachorro_arabe.jpeg"
         ></HomeSection>
         <HomeSection

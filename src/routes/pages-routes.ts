@@ -8,7 +8,10 @@ export const ROUTES = {
   ABOUT: '/about',
   CONTACT: '/contact',
   CONTRIBUTE: '/contribute',
-  EVENTS: '/events',
+  EVENTS: {
+    HOME: '/events',
+    DETAILS: (id: string) => `/events/details/${id}`,
+  },
   HISTORY: {
     HOME: '/history',
     SECTION1: '/history/section1',
