@@ -12,6 +12,7 @@ import { contributeRoute } from './contribute'
 import { eventsRoute } from './events'
 import { historyRoute } from './history'
 import { newsRoute } from './news'
+import { partnersRoute } from './partners'
 import { storeRoute } from './store'
 
 export const routes = createBrowserRouter([
@@ -32,6 +33,7 @@ export const routes = createBrowserRouter([
       aboutRoute,
       eventsRoute,
       aboutUsRoute,
+      partnersRoute,
     ],
   },
   {
