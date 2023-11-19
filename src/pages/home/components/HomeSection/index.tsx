@@ -13,19 +13,28 @@ const HomeSection: React.FC<HomeSectionProps> = ({
   path,
   children,
 }) => {
+  const addImageFallback = (event: { currentTarget: { src: string } }) => {
+    event.currentTarget.src = '/images/cachorro_arabe.jpeg'
+  }
   return (
-    <Link
-      to={path}
-      className="hover card w-96 shadow-xl transition delay-100 ease-in-out hover:bg-gray-300"
-    >
-      <div className="card-body items-center text-center">
-        <h2 className="card-title leading-3">{title}</h2>
-        <figure className="px-10 pt-4">
-          <img src={image} className="rounded-xl" />
-        </figure>
-        {children}
-      </div>
-    </Link>
+    <div className="flex justify-center">
+      <Link
+        to={path}
+        className="hover card w-96 shadow-xl transition delay-100 ease-in-out hover:bg-gray-300"
+      >
+        <div className="card-body items-center text-center">
+          <h2 className="card-title leading-3">{title}</h2>
+          <figure className="px-10 py-4">
+            <img
+              src={image}
+              className="rounded-xl"
+              onError={addImageFallback}
+            />
+          </figure>
+          {children}
+        </div>
+      </Link>
+    </div>
   )
 }
 
