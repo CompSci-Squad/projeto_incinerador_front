@@ -1,5 +1,7 @@
+import DevText from './content/devs.mdx'
+
 const AboutUs = () => {
-  return <h1>Sobre os devs</h1>
+  return <DevText />
 }
 
 export default AboutUs

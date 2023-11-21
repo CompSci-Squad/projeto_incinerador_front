@@ -8,6 +8,7 @@ export const ROUTES = {
   ABOUT: '/about',
   CONTACT: '/contact',
   CONTRIBUTE: '/contribute',
+  PARTNERS: '/partners',
   EVENTS: {
     HOME: '/events',
     DETAILS: (id: string) => `/events/details/${id}`,
