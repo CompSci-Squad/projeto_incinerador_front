@@ -1,16 +1,21 @@
+import { useSearchParams } from 'react-router-dom'
+
 import Loader from '~/components/Loader'
 import { useProductsLoader } from '~/features/store/store.loader'
 
 import ReturnButton from '../../components/ReturnButton'
 import { ROUTES } from '../../routes/pages-routes'
+import Pagination from './components/Pagination'
 import StoreCard from './components/StoreCard'
 import StoreContent, {
   frontmatter as storeFrontmatter,
 } from './content/store.mdx'
 
 const Store = () => {
+  const [searchParams] = useSearchParams()
   const { products } = useProductsLoader()
   const { data } = products
+  const page = Number(searchParams.get('page'))
   return (
     <main>
       <ReturnButton path={ROUTES.HOME} />
@@ -39,6 +44,7 @@ const Store = () => {
           </section>
         )}
       </Loader>
+      <Pagination page={page} nextPage={3} prevPage={2} totalPages={8} />
     </main>
   )
 }

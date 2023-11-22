@@ -1,66 +1,23 @@
-import { useMemo } from 'react'
-import { useSearchParams } from 'react-router-dom'
-
-import PaginationButton from '../PageButton'
+import PaginationButton from '../PaginationButton'
 
 type PaginationProps = {
   page: number
   totalPages: number
   nextPage: number
   prevPage: number
-  hasNextPage: boolean
 }
 
-const Pagination = ({
-  page,
-  totalPages,
-  nextPage,
-  prevPage,
-  hasNextPage,
-}: PaginationProps) => {
-  const range = (start: number, end: number) => {
-    const length = end - start + 1
-    return Array.from({ length }, (_, index) => index + start)
-  }
-
-  const totalPagesList: number[] | undefined = useMemo(() => {
-    const showPrevButtons = prevPage > 2
-    const showNextButtons = nextPage >= 2
-
-    if (page === totalPages) {
-      const rightRange = range(totalPages - 5 + 1, totalPages)
-      return [...rightRange]
-    }
-
-    if (!showPrevButtons && showNextButtons) {
-      const end = totalPages >= 5 ? 5 : totalPages
-      const leftRange = range(1, end)
-      return [...leftRange]
-    }
-
-    if (showPrevButtons && !showNextButtons) {
-      const rightRange = range(totalPages - 5 + 1, totalPages)
-      return [...rightRange]
-    }
-
-    if (showPrevButtons && showNextButtons) {
-      const end = totalPages >= nextPage + 2 ? nextPage + 1 : nextPage
-      const middleRange = range(prevPage - 1, end)
-      return [...middleRange]
-    }
-  }, [totalPages, page])
-
+const Pagination = ({ totalPages, page }: PaginationProps) => {
+  const arr = Array.from({ length: totalPages }, (_, index) => index + 1)
   return (
     <div className="join">
-      {totalPagesList
-        ?.filter((n) => n > 0)
-        ?.map((pageNumber) => (
-          <PaginationButton
-            key={pageNumber}
-            pageNumber={page}
-            isActive={pageNumber === page}
-          />
-        ))}
+      {arr.map((_, index) => (
+        <PaginationButton
+          isActive={index + 1 === page}
+          pageNumber={index + 1}
+          key={index + 1}
+        />
+      ))}
     </div>
   )
 }
