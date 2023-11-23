@@ -14,7 +14,7 @@ const PaginationButton: React.FC<PaginationProps> = ({
     <button
       className={
         isActive === true
-          ? 'btn join-item bg-eco_green'
+          ? 'hover btn join-item bg-eco_green hover:bg-eco_green_hover'
           : 'hover btn join-item hover:bg-eco_green'
       }
       onClick={() => navigate({ page: pageNumber })}

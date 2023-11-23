@@ -1,8 +1,11 @@
+import { useSearchParams } from 'react-router-dom'
+
 import Loader from '~/components/Loader'
 import ReturnButton from '~/components/ReturnButton'
 import { useEventsLoader } from '~/features/events/event.loader'
 
 import Loading from '../../components/Loading'
+import Pagination from '../../components/Pagination'
 import RequestError from '../../components/RequestError'
 import { ROUTES } from '../../routes/pages-routes'
 import EventCard from './components/EventCard'
@@ -11,8 +14,10 @@ import EventContent, {
 } from './content/eventSection.mdx'
 
 const Events = () => {
+  const [searchParams] = useSearchParams()
   const { events } = useEventsLoader()
   const { data } = events
+  const page = Number(searchParams.get('page'))
   return (
     <main>
       <ReturnButton path={ROUTES.HOME} />
@@ -37,6 +42,9 @@ const Events = () => {
           </section>
         )}
       </Loader>
+      <section className="flex items-center justify-center pb-4">
+        <Pagination page={page} totalPages={8} />
+      </section>
     </main>
   )
 }

@@ -1,10 +1,8 @@
-import PaginationButton from '../PaginationButton'
+import PaginationButton from './PaginationButton'
 
 type PaginationProps = {
   page: number
   totalPages: number
-  nextPage: number
-  prevPage: number
 }
 
 const Pagination = ({ totalPages, page }: PaginationProps) => {
