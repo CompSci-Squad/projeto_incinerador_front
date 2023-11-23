@@ -10,8 +10,8 @@ export const eventsLoader = async ({ request }: LoaderFunctionArgs) => {
   const page = url.searchParams.get('page')
 
   const queryParams = {
+    _page: page || 1,
     _limit: limit || 8,
-    _page: page,
   }
   const events = await eventsList({ params: queryParams })
   return defer({ events })

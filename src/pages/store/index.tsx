@@ -1,16 +1,21 @@
-import Loader from '~/components/Loader'
-import { useProductsLoader } from '~/features/store/store.loader'
+import { useSearchParams } from 'react-router-dom'
 
-import ReturnButton from '../../components/ReturnButton'
-import { ROUTES } from '../../routes/pages-routes'
+import Loader from '~/components/Loader'
+import Pagination from '~/components/Pagination'
+import ReturnButton from '~/components/ReturnButton'
+import { useProductsLoader } from '~/features/store/store.loader'
+import { ROUTES } from '~/routes/pages-routes'
+
 import StoreCard from './components/StoreCard'
 import StoreContent, {
   frontmatter as storeFrontmatter,
 } from './content/store.mdx'
 
 const Store = () => {
+  const [searchParams] = useSearchParams()
   const { products } = useProductsLoader()
   const { data } = products
+  const page = Number(searchParams.get('page'))
   return (
     <main>
       <ReturnButton path={ROUTES.HOME} />
@@ -39,6 +44,9 @@ const Store = () => {
           </section>
         )}
       </Loader>
+      <section className="flex items-center justify-center pb-4">
+        <Pagination page={page} totalPages={8} />
+      </section>
     </main>
   )
 }

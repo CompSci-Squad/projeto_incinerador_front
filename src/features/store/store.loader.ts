@@ -13,8 +13,8 @@ export const productsLoader = async ({ request }: LoaderFunctionArgs) => {
   const page = url.searchParams.get('page')
 
   const queryParams = {
+    _page: page || 1,
     _limit: limit || 8,
-    _page: page,
   }
   const products = await productsList({ params: queryParams })
   return defer({ products })
