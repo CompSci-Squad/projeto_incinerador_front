@@ -17,11 +17,15 @@ const Store = () => {
   const { data } = products
   const page = Number(searchParams.get('page'))
   return (
-    <main>
+    <main className="inset-x-0 bottom-0 pt-16">
       <ReturnButton path={ROUTES.HOME} />
       <h1 className="py-10 text-center text-4xl font-bold">Loja</h1>
-      <section className="flex items-center justify-center gap-10 py-10">
-        <img src={storeFrontmatter.image} alt="" className="rounded-2xl" />
+      <section className="flex flex-col items-center justify-center gap-10 py-10 md:flex-row">
+        <img
+          src={storeFrontmatter.image}
+          alt=""
+          className="h-24 w-24 rounded-2xl md:h-52 md:w-52"
+        />
         <StoreContent />
       </section>
       <Loader
@@ -30,7 +34,7 @@ const Store = () => {
         error={<h1> ja faço</h1>}
       >
         {(data) => (
-          <section className="grid grid-cols-4 grid-rows-2 gap-4 p-6">
+          <section className="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:p-6">
             {data.map(({ id, title, images, price, description }) => (
               <StoreCard
                 id={id}
