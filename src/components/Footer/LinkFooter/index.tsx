@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { twMerge } from 'tailwind-merge'
 
-type LinkFooterProps = {
+export type LinkFooterProps = {
   path: string
   title: string
   styles?: string
