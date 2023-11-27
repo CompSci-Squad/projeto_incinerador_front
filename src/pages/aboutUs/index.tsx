@@ -1,11 +1,7 @@
+import DevText from './content/devs.mdx'
+
 const AboutUs = () => {
-  return (
-    <main>
-      <div className="flex justify-center text-xl font-black">
-        Desenvolvedores
-      </div>
-    </main>
-  )
+  return <DevText />
 }
 
 export default AboutUs

@@ -38,10 +38,10 @@ dependencies:
 
 devDependencies:
   '@commitlint/cli':
-    specifier: ^17.7.2
+    specifier: ^17.8.1
     version: 17.8.1
   '@commitlint/config-conventional':
-    specifier: ^17.7.0
+    specifier: ^17.8.1
     version: 17.8.1
   '@faker-js/faker':
     specifier: ^8.2.0

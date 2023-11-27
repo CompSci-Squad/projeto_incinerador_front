@@ -4,7 +4,7 @@ import {
   ProductLoader,
   ProductsLoader,
 } from '~/interfaces/store/product.interface'
-import { getProduct, productsList } from '~/services/endpoints/productsList'
+import { getProduct, productsList } from '~/services/endpoints/products'
 
 export const productsLoader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url)
@@ -13,8 +13,8 @@ export const productsLoader = async ({ request }: LoaderFunctionArgs) => {
   const page = url.searchParams.get('page')
 
   const queryParams = {
+    _page: page || 1,
     _limit: limit || 8,
-    _page: page,
   }
   const products = await productsList({ params: queryParams })
   return defer({ products })

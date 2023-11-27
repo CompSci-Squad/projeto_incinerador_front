@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "test": "vitest",
+    "test": "vitest --passWithNoTests=true",
     "lint": "eslint src/* --ext ts,tsx --report-unused-disable-directives --max-warnings 2",
     "preview": "vite preview",
     "prepare": "husky install",
@@ -28,8 +28,8 @@
     "vite-tsconfig-paths": "^4.2.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
     "@faker-js/faker": "^8.2.0",
     "@mdx-js/rollup": "^3.0.0",
     "@storybook/addon-essentials": "^7.4.6",

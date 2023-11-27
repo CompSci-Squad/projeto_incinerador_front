@@ -9,10 +9,10 @@ const Footer = () => {
   return (
     <footer className="bg-eco_green">
       <section className="flex grow items-center justify-around gap-4 py-2 pt-4">
-        <LinkFooter path={ROUTES.COLLECTIVE} title="O Coletivo" />
-        <LinkFooter path={ROUTES.HISTORY} title="História" />
+        <LinkFooter path={ROUTES.COLLECTIVE.HOME} title="O Coletivo" />
+        <LinkFooter path={ROUTES.HISTORY.HOME} title="História" />
         <LinkFooter path={ROUTES.CONTRIBUTE} title="Apoie a Usina" />
-        <LinkFooter path={ROUTES.EVENTS} title="Eventos" />
+        <LinkFooter path={ROUTES.EVENTS.HOME} title="Eventos" />
         <LinkFooter path={ROUTES.CONTACT} title="Fale conosco" />
       </section>
       <section className="flex flex-col items-center justify-center py-2 ">
