@@ -18,7 +18,7 @@ const Pagination = ({ totalPages, page }: PaginationProps) => {
     <section className="join flex items-center justify-center">
       <PaginationNavButton
         direction="back"
-        onClick={() => handlePageChange(Math.max(page - 1, 1))}
+        onClick={() => handlePageChange(page - 1)}
         disabled={page === 1}
       />
       <div>
@@ -33,7 +33,7 @@ const Pagination = ({ totalPages, page }: PaginationProps) => {
       </div>
       <PaginationNavButton
         direction="next"
-        onClick={() => handlePageChange(Math.min(page + 1, totalPages))}
+        onClick={() => handlePageChange(page + 1)}
         disabled={page === totalPages}
       />
     </section>
@@ -41,13 +41,13 @@ const Pagination = ({ totalPages, page }: PaginationProps) => {
     <section className="join flex items-center justify-center pb-4">
       <PaginationNavButton
         direction="back"
-        onClick={() => handlePageChange(Math.max(page - 1, 1))}
+        onClick={() => handlePageChange(page - 1)}
         disabled={page === 1}
       />
       <span className="btn join-item hover:bg-eco_green">{page}</span>
       <PaginationNavButton
         direction="next"
-        onClick={() => handlePageChange(Math.min(page + 1, totalPages))}
+        onClick={() => handlePageChange(page + 1)}
         disabled={page === totalPages}
       />
     </section>

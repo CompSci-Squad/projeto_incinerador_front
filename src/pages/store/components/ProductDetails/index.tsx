@@ -17,7 +17,7 @@ const ProductDetails = () => {
   }
 
   return (
-    <main>
+    <main className="inset-x-0 bottom-0 pt-16">
       <ReturnButton path={ROUTES.STORE.HOME} />
       <Loader resolve={data} loading={<Loading />} error={<RequestError />}>
         {(data) => (
