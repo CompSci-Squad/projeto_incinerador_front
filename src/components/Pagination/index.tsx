@@ -15,7 +15,7 @@ const Pagination = ({ totalPages, page }: PaginationProps) => {
     navigate({ page: newPage })
   }
   return window.innerWidth >= 786 ? (
-    <section className="join flex items-center justify-center pb-4">
+    <section className="join flex items-center justify-center">
       <PaginationNavButton
         direction="back"
         onClick={() => handlePageChange(Math.max(page - 1, 1))}

@@ -20,7 +20,7 @@ const Store = () => {
     <main className="inset-x-0 bottom-0 pt-16">
       <ReturnButton path={ROUTES.HOME} />
       <h1 className="py-10 text-center text-4xl font-bold">Loja</h1>
-      <section className="flex flex-col items-center justify-center gap-10 py-10 md:flex-row">
+      <section className="flex flex-col items-center justify-center gap-2 px-6 py-10 md:flex-row md:justify-between">
         <img
           src={storeFrontmatter.image}
           alt=""
@@ -34,7 +34,7 @@ const Store = () => {
         error={<h1> ja faço</h1>}
       >
         {(data) => (
-          <section className="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:p-6">
+          <section className="bg-white md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:p-6">
             {data.map(({ id, title, images, price, description }) => (
               <StoreCard
                 id={id}
@@ -48,7 +48,7 @@ const Store = () => {
           </section>
         )}
       </Loader>
-      <section className="flex items-center justify-center pb-4">
+      <section className="flex items-center justify-center py-4">
         <Pagination page={page} totalPages={8} />
       </section>
     </main>

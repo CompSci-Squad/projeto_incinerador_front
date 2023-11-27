@@ -31,7 +31,7 @@ const StoreCard: React.FC<StoreCardProps> = ({
         <h3 className="card-title">{title}</h3>
         <span className="text-left">{description}</span>
         <span>{`R$${price}`}</span>
-        <div className="card-actions md:justify-end">
+        <div className="justify-end md:card-actions">
           <Link
             to={ROUTES.STORE.DETAILS(id)}
             className="btn bg-eco_green text-eco_white hover:bg-eco_green_hover"
