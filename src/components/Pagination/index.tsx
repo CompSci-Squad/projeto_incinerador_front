@@ -1,8 +1,7 @@
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
-
 import { useNavigateParams } from '~/hooks/useNavigateParams'
 
 import PaginationButton from './PaginationButton'
+import PaginationNavButton from './PaginationNavButton'
 
 type PaginationProps = {
   page: number
@@ -12,37 +11,45 @@ type PaginationProps = {
 const Pagination = ({ totalPages, page }: PaginationProps) => {
   const navigate = useNavigateParams()
   const arr = Array.from({ length: totalPages }, (_, index) => index + 1)
-  return (
+  const handlePageChange = (newPage: number) => {
+    navigate({ page: newPage })
+  }
+  return window.innerWidth >= 786 ? (
     <section className="join flex items-center justify-center pb-4">
-      {page !== 1 ? (
-        <button
-          className="hover btn join-item bg-eco_green hover:bg-eco_green_hover"
-          onClick={() => navigate({ page: page - 1 })}
-        >
-          <IoIosArrowBack className="text-white" />
-        </button>
-      ) : (
-        ''
-      )}
+      <PaginationNavButton
+        direction="back"
+        onClick={() => handlePageChange(Math.max(page - 1, 1))}
+        disabled={page === 1}
+      />
       <div>
-        {arr.map((_, index) => (
+        {arr.map((pageNumber) => (
           <PaginationButton
-            isActive={index + 1 === page}
-            pageNumber={index + 1}
-            key={index + 1}
+            key={pageNumber}
+            isActive={pageNumber === page}
+            pageNumber={pageNumber}
+            onClick={() => handlePageChange(pageNumber)}
           />
         ))}
       </div>
-      {page !== 8 ? (
-        <button
-          className="hover btn join-item bg-eco_green hover:bg-eco_green_hover"
-          onClick={() => navigate({ page: page + 1 })}
-        >
-          <IoIosArrowForward className="text-white" />
-        </button>
-      ) : (
-        ''
-      )}
+      <PaginationNavButton
+        direction="next"
+        onClick={() => handlePageChange(Math.min(page + 1, totalPages))}
+        disabled={page === totalPages}
+      />
+    </section>
+  ) : (
+    <section className="join flex items-center justify-center pb-4">
+      <PaginationNavButton
+        direction="back"
+        onClick={() => handlePageChange(Math.max(page - 1, 1))}
+        disabled={page === 1}
+      />
+      <span className="btn join-item hover:bg-eco_green">{page}</span>
+      <PaginationNavButton
+        direction="next"
+        onClick={() => handlePageChange(Math.min(page + 1, totalPages))}
+        disabled={page === totalPages}
+      />
     </section>
   )
 }
