@@ -1,12 +1,12 @@
 type ParsedLinkHeader = {
   prev: number
   next: number
-  limit: number
+  last: number
   first: number
   current: number
 }
 
-export const parseLinkHeader = (linkHeader: string, current: string) => {
+export const parseLinkHeader = (linkHeader: string) => {
   const obj = Object.fromEntries(
     linkHeader
       .split(', ')
@@ -24,6 +24,7 @@ export const parseLinkHeader = (linkHeader: string, current: string) => {
   const transformedObject = Object.fromEntries(
     Object.entries(obj).map(([key, value]) => [key, Number(value)]),
   )
-  transformedObject['current'] = Number(current)
-  return obj as unknown as ParsedLinkHeader
+  transformedObject['current'] =
+    obj.next === undefined ? Number(obj.last) : Number(Number(obj.next) - 1)
+  return transformedObject as unknown as ParsedLinkHeader
 }

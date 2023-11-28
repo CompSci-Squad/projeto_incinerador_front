@@ -1,4 +1,3 @@
-import Banner from '~/pages/home/components/Banner'
 import { ROUTES } from '~/routes/pages-routes'
 
 import HomeSection from './components/HomeSection/'
@@ -29,9 +28,8 @@ import ContributeText, {
 
 const Home = () => {
   return (
-    <main>
-      <Banner />
-      <section className="grid grid-cols-4 grid-rows-2 gap-4 py-6">
+    <main className="inset-x-0 bottom-0 pt-16">
+      <ul className="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:py-6">
         <HomeSection
           title={collectiveFrontmatter.title}
           path={ROUTES.COLLECTIVE.HOME}
@@ -88,7 +86,7 @@ const Home = () => {
         >
           <PartnersText />
         </HomeSection>
-      </section>
+      </ul>
     </main>
   )
 }

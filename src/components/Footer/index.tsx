@@ -2,19 +2,39 @@ import dayjs from 'dayjs'
 
 import { ROUTES } from '~/routes/pages-routes'
 
-import LinkFooter from './LinkFooter'
+import LinkFooter, { LinkFooterProps } from './LinkFooter'
 
 const Footer = () => {
   const year = dayjs().get('year')
+  const links: Array<LinkFooterProps> = [
+    {
+      path: ROUTES.COLLECTIVE.HOME,
+      title: 'O Coletivo',
+    },
+    {
+      path: ROUTES.HISTORY.HOME,
+      title: 'História',
+    },
+    {
+      path: ROUTES.CONTRIBUTE,
+      title: 'Apoie a usina',
+    },
+    {
+      path: ROUTES.EVENTS.HOME,
+      title: 'Eventos',
+    },
+    {
+      path: ROUTES.CONTACT,
+      title: 'Fale conosco',
+    },
+  ]
   return (
     <footer className="bg-eco_green">
-      <section className="flex grow items-center justify-around gap-4 py-2 pt-4">
-        <LinkFooter path={ROUTES.COLLECTIVE.HOME} title="O Coletivo" />
-        <LinkFooter path={ROUTES.HISTORY.HOME} title="História" />
-        <LinkFooter path={ROUTES.CONTRIBUTE} title="Apoie a Usina" />
-        <LinkFooter path={ROUTES.EVENTS.HOME} title="Eventos" />
-        <LinkFooter path={ROUTES.CONTACT} title="Fale conosco" />
-      </section>
+      <ul className="flex flex-col items-center justify-around gap-3 py-2 pt-4 md:grow md:flex-row">
+        {links.map((link) => (
+          <LinkFooter key={link.title} path={link.path} title={link.title} />
+        ))}
+      </ul>
       <section className="flex flex-col items-center justify-center py-2 ">
         <LinkFooter
           styles="font-normal"

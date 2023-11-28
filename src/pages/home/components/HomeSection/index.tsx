@@ -20,14 +20,14 @@ const HomeSection: React.FC<HomeSectionProps> = ({
     <div className="flex justify-center">
       <Link
         to={path}
-        className="hover card w-96 shadow-xl transition delay-100 ease-in-out hover:bg-gray-300"
+        className="hover card card-compact shadow-xl transition delay-100 ease-in-out md:card-normal hover:bg-gray-300"
       >
         <div className="card-body items-center text-center">
           <h2 className="card-title leading-3">{title}</h2>
           <figure className="px-10 py-4">
             <img
               src={image}
-              className="rounded-xl"
+              className="h-16 w-16 rounded-xl md:h-40 md:w-40"
               onError={addImageFallback}
             />
           </figure>
