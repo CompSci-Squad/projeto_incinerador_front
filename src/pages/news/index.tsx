@@ -73,7 +73,7 @@ const News = () => {
           className="h-28 w-28 rounded-2xl md:h-52 md:w-52"
           onError={addImageFallback}
         />
-        <div className=" flex h-64 w-64 items-center justify-center md:pl-6">
+        <div className="flex h-64 w-64 items-center justify-center md:pl-6">
           <News1Content />
         </div>
       </section>
