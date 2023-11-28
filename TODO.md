@@ -1,1 +1,0 @@
-add pagination, add active hover for image on product detail

@@ -15,7 +15,7 @@ const Store = () => {
   const { data, headers } = products
   const { current, last } = parseLinkHeader(headers['link'])
   return (
-    <main className="inset-x-0 bottom-0 pt-16">
+    <main className="inset-x-0 bottom-0 pt-20">
       <ReturnButton path={ROUTES.HOME} />
       <h1 className="py-10 text-center text-4xl font-bold">Loja</h1>
       <section className="flex flex-col items-center justify-center gap-2 py-4 md:flex-row md:px-6 md:py-10">
