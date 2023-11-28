@@ -2,10 +2,9 @@ export const ROUTES = {
   HOME: '/',
   COLLECTIVE: {
     HOME: '/collective',
-    PROPOSALS: '/collective/proposals',
-    ORIGIN: '/collective/origin',
+    IDEAS: '/collective/proposals',
+    GROW: '/collective/origin',
   },
-  ABOUT: '/about',
   CONTACT: '/contact',
   CONTRIBUTE: '/contribute',
   PARTNERS: '/partners',
@@ -15,8 +14,8 @@ export const ROUTES = {
   },
   HISTORY: {
     HOME: '/history',
-    SECTION1: '/history/section1',
-    SECTION2: '/history/section2',
+    INCINERATOR: '/history/incinerator',
+    OCCUPATION: '/history/occupation',
   },
   STORE: {
     HOME: '/store',

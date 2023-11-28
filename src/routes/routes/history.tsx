@@ -1,8 +1,8 @@
 import { RouteObject } from 'react-router-dom'
 
 import History from '~/pages/history'
-import Section1 from '~/pages/history/components/section1'
-import Section2 from '~/pages/history/components/section2'
+import Incinerator from '~/pages/history/components/Incinerator'
+import Occupation from '~/pages/history/components/Occupation'
 
 export const historyRoute: RouteObject = {
   path: 'history',
@@ -12,12 +12,12 @@ export const historyRoute: RouteObject = {
       element: <History />,
     },
     {
-      path: 'section1',
-      element: <Section1 />,
+      path: 'incinerator',
+      element: <Incinerator />,
     },
     {
-      path: 'section2',
-      element: <Section2 />,
+      path: 'occupation',
+      element: <Occupation />,
     },
   ],
 }

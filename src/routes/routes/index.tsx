@@ -4,7 +4,6 @@ import Layout from '~/components/layout'
 import Erro404 from '~/pages/404-error'
 import Home from '~/pages/home'
 
-import { aboutRoute } from './about'
 import { aboutUsRoute } from './aboutUs'
 import { collectiveRoute } from './collective'
 import { contactRoute } from './contact'
@@ -30,7 +29,6 @@ export const routes = createBrowserRouter([
       newsRoute,
       contributeRoute,
       contactRoute,
-      aboutRoute,
       eventsRoute,
       aboutUsRoute,
       partnersRoute,
