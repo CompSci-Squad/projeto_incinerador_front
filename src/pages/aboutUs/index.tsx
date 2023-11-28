@@ -41,7 +41,7 @@ const AboutUs = () => {
         <ul>
           {linkedInLinks.map(({ name, link }) => (
             <li key={name}>
-              <a href={link}>
+              <a href={link} target="_blank">
                 <div className="flex items-center justify-start gap-2 rounded-2xl px-4 hover:bg-eco_green">
                   <FaLinkedin />
                   <span>{name}</span>
