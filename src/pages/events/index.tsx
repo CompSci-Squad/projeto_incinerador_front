@@ -32,7 +32,7 @@ const Events = () => {
       </section>
       <Loader resolve={data} loading={<Loading />} error={<RequestError />}>
         {(data) => (
-          <section className="rounded-2xl bg-white md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:p-6">
+          <section className="mx-4 rounded-2xl bg-white md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:p-6">
             {data.map(({ id, date, description, image, title }) => (
               <EventCard
                 key={id}
@@ -46,7 +46,7 @@ const Events = () => {
           </section>
         )}
       </Loader>
-      <section className="flex items-center justify-center pb-4">
+      <section className="flex items-center justify-center py-4">
         <Pagination page={current} totalPages={last} />
       </section>
     </main>

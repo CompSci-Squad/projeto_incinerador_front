@@ -34,7 +34,7 @@ const Store = () => {
         error={<h1> ja faço</h1>}
       >
         {(data) => (
-          <section className="rounded-2xl bg-white md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:p-6">
+          <section className="mx-4 rounded-2xl bg-white md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:p-6">
             {data.map(({ id, title, images, price, description }) => (
               <StoreCard
                 id={id}
