@@ -29,7 +29,7 @@ import ContributeText, {
 const Home = () => {
   return (
     <main className="inset-x-0 bottom-0 pt-16">
-      <ul className="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:py-6">
+      <ul className="mx-4 md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:py-6">
         <HomeSection
           title={collectiveFrontmatter.title}
           path={ROUTES.COLLECTIVE.HOME}

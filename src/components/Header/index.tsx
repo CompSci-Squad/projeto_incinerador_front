@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { HiXMark } from 'react-icons/hi2'
 import { RxHamburgerMenu } from 'react-icons/rx'
+import { Link } from 'react-router-dom'
 
 import { ROUTES } from '~/routes/pages-routes'
 
@@ -21,8 +22,16 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <header className="fixed left-0 top-0 z-30 w-full bg-eco_green shadow-md">
-      <div className="items-center justify-between bg-eco_green px-7 py-4 md:flex md:px-10">
-        <p>Logo Aqui</p>
+      <div className="items-center justify-between bg-eco_green px-7 py-2 md:flex md:px-10">
+        <button>
+          <Link to={ROUTES.HOME}>
+            <img
+              className="h-10 w-10  rounded-2xl md:h-14 md:w-14"
+              src="/images/logo.jpg"
+              alt="logo da usina eco cultural"
+            />
+          </Link>
+        </button>
         <nav>
           <button
             onClick={() => setIsOpen(!isOpen)}
