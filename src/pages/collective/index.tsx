@@ -1,6 +1,6 @@
-import CollectiveSection from "./components/CollectiveSection"
-import { ROUTES } from "~/routes/pages-routes"
+import { ROUTES } from '~/routes/pages-routes'
 
+import CollectiveSection from './components/CollectiveSection'
 import CollectiveSectionGrow, {
   frontmatter as growSectionFrontmatter,
 } from './components/CollectiveSection/content/selectionCollectiveGrow.mdx'
@@ -8,23 +8,26 @@ import CollectiveSectionIdeia, {
   frontmatter as ideasSectionFrontmatter,
 } from './components/CollectiveSection/content/selectionCollectiveIdeas.mdx'
 
-
 const Collective = () => {
   return (
-    <main>
-      <div className="flex inset-x-0 bottom-0 pt-20 pb-6 justify-center text-xl font-black">O Coletivo</div>
-      <section className="flex flex-col md:flex-row md:justify-around justify-center py-6">
+    <main className="inset-x-0 pb-6 pt-20 md:mb-40">
+      <div className="inset-x-0 bottom-0 flex justify-center pb-6 pt-20 text-xl font-black">
+        O Coletivo
+      </div>
+      <section className="flex flex-col items-center justify-center gap-3 py-6 md:flex-row">
         <CollectiveSection
-          image={ideasSectionFrontmatter.image || "./images/cachorro_arabe.jpeg"}
+          image={
+            ideasSectionFrontmatter.image || './images/cachorro_arabe.jpeg'
+          }
           path={ROUTES.COLLECTIVE.IDEAS}
-          title={ideasSectionFrontmatter.title || "Ideas"}
+          title={ideasSectionFrontmatter.title || 'Ideas'}
         >
           <CollectiveSectionIdeia />
         </CollectiveSection>
         <CollectiveSection
-          image={growSectionFrontmatter.image || "./images/cachorro_arabe.jpeg"}
+          image={growSectionFrontmatter.image || './images/cachorro_arabe.jpeg'}
           path={ROUTES.COLLECTIVE.GROW}
-          title={growSectionFrontmatter.title || "Grow"}
+          title={growSectionFrontmatter.title || 'Grow'}
         >
           <CollectiveSectionGrow />
         </CollectiveSection>
