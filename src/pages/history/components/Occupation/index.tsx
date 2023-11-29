@@ -11,7 +11,7 @@ import SectionOccupationContent2, {
 
 const Occupation = () => {
   return (
-    <main className="inset-x-0 bottom-0 pb-6 pt-20">
+    <main className="inset-x-0 bottom-0 pb-6 pt-20 md:mb-40">
       <ReturnButton path={ROUTES.HISTORY.HOME} />
       <h1 className="flex justify-center text-xl font-black">
         {sectionOccupationContentFrontmatter.title}

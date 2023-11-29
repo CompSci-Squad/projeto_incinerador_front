@@ -11,7 +11,7 @@ import HistorySectionOccupation, {
 
 const History = () => {
   return (
-    <main className="inset-x-0 pb-6 pt-20 md:mb-40">
+    <main className="inset-x-0 pb-6 pt-20 md:mb-52">
       <ReturnButton path={ROUTES.HOME} />
       <div className="flex justify-center text-xl font-black">A História</div>
       <section className="flex flex-col justify-around py-6 md:flex-row">
