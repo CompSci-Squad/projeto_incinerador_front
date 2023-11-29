@@ -1,7 +1,21 @@
+import SectionDetail from '~/components/SectionDetail'
+
+import SectionContactContent, {
+  frontmatter as sectionContactContentFrontmatter
+} from "./content/contact1.mdx"
+import SectionContactContent2, {
+  frontmatter as sectionContactContentFrontmatter2
+} from './content/contact2.mdx'
+
 const Contact = () => {
   return (
-    <main>
-      <div className="flex justify-center text-xl font-black">Fale Conosco</div>
+    <main className='inset-x-0 bottom-0 pt-20 pb-6'>
+      <h1 className="flex justify-center text-xl font-black">{sectionContactContentFrontmatter.title}</h1>
+      <SectionDetail
+        images={[sectionContactContentFrontmatter.image]}
+        content={[<SectionContactContent key={1} />, <SectionContactContent2 key={2}/>]}
+        alts={[sectionContactContentFrontmatter.alt]}
+      />
     </main>
   )
 }

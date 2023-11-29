@@ -13,7 +13,7 @@ const Collective = () => {
   return (
     <main>
       <div className="flex inset-x-0 bottom-0 pt-20 pb-6 justify-center text-xl font-black">O Coletivo</div>
-      <section className="flex justify-around py-6">
+      <section className="flex flex-col md:flex-row md:justify-around justify-center py-6">
         <CollectiveSection
           image={ideasSectionFrontmatter.image || "./images/cachorro_arabe.jpeg"}
           path={ROUTES.COLLECTIVE.IDEAS}
