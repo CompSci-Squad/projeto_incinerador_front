@@ -5,9 +5,7 @@ import { ROUTES } from '~/routes/pages-routes'
 import SectionOccupationContent, {
   frontmatter as sectionOccupationContentFrontmatter,
 } from '../../content/ocupation/historyOccupation.mdx'
-import SectionOccupationContent2, {
-  frontmatter as sectionOccupationContent2Frontmatter,
-} from '../../content/ocupation/historyOccupation2.mdx'
+import SectionOccupationContent2 from '../../content/ocupation/historyOccupation2.mdx'
 
 const Occupation = () => {
   return (
@@ -17,22 +15,12 @@ const Occupation = () => {
         {sectionOccupationContentFrontmatter.title}
       </h1>
       <SectionDetail
-        images={
-          [
-            sectionOccupationContentFrontmatter.image,
-            sectionOccupationContent2Frontmatter.image,
-          ] ?? ['']
-        }
+        images={[sectionOccupationContentFrontmatter.image] ?? ['']}
         content={[
           <SectionOccupationContent key={1} />,
           <SectionOccupationContent2 key={2} />,
         ]}
-        alts={
-          [
-            sectionOccupationContentFrontmatter.alt,
-            sectionOccupationContent2Frontmatter.alt,
-          ] ?? ['']
-        }
+        alts={[sectionOccupationContentFrontmatter.alt] ?? ['']}
       />
     </main>
   )
