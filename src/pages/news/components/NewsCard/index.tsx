@@ -9,13 +9,7 @@ type NewsCardProps = {
   date?: Date
 }
 
-const NewsCard: React.FC<NewsCardProps> = ({
-  link,
-  description,
-  image,
-  alt,
-  date,
-}) => {
+const NewsCard: React.FC<NewsCardProps> = ({ link, description, date }) => {
   const day = date
     ? dayjs(date).format('DD/MM/YYYY')
     : dayjs(faker.date.past()).format('DD/MM/YYYY')
