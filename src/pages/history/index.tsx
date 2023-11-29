@@ -14,7 +14,7 @@ const History = () => {
     <main className="inset-x-0 pb-6 pt-20 md:mb-52">
       <ReturnButton path={ROUTES.HOME} />
       <div className="flex justify-center text-xl font-black">A História</div>
-      <section className="flex flex-col justify-around py-6 md:flex-row">
+      <section className="flex flex-col items-center justify-center gap-3 py-6 md:flex-row">
         <HistorySection
           image={
             incineratorSectionFrontmatter.image ||

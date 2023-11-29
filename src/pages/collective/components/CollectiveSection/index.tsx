@@ -16,12 +16,12 @@ const CollectiveSection: React.FC<CollectiveSectionProps> = ({
   return (
     <Link
       to={path}
-      className="hover card w-96 shadow-xl transition delay-100 ease-in-out hover:bg-gray-300"
+      className="hover card shadow-xl transition delay-100 ease-in-out hover:bg-gray-300"
     >
       <div className="card-body items-center text-center">
         <h2 className="card-title leading-3">{title}</h2>
         <figure className="px-10 pt-4">
-          <img src={image} className="rounded-xl" />
+          <img src={image} className="h-24 w-24 rounded-2xl md:h-60 md:w-60" />
         </figure>
         {children}
       </div>

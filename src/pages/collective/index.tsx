@@ -10,7 +10,7 @@ import CollectiveSectionIdeia, {
 
 const Collective = () => {
   return (
-    <main className="inset-x-0 pb-6 pt-20 md:mb-40">
+    <main className="inset-x-0 pb-6 pt-20 md:mb-52">
       <div className="inset-x-0 bottom-0 flex justify-center pb-6 pt-20 text-xl font-black">
         O Coletivo
       </div>
