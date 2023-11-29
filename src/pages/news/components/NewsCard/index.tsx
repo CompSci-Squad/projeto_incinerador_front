@@ -20,12 +20,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
     ? dayjs(date).format('DD/MM/YYYY')
     : dayjs(faker.date.past()).format('DD/MM/YYYY')
   return (
-    <li className="m-4 flex flex-col items-center justify-center gap-2 py-4 shadow-xl">
-      <img
-        className="h-28 w-28 rounded-2xl md:h-52 md:w-52"
-        src={image ?? '/images/cachorro_arabe.jpeg'}
-        alt={alt ?? 'cachorro arabe'}
-      />
+    <li className="m-4 flex flex-col items-center justify-center gap-2 rounded-2xl border-b-2 border-eco_green py-4 shadow-xl">
       {description}
       <div className="flex gap-2">
         <span className="font-bold">Publicado em:</span>
