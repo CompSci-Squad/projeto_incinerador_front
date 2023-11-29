@@ -1,5 +1,6 @@
 import { ROUTES } from '~/routes/pages-routes'
 
+import ReturnButton from '../../components/ReturnButton'
 import HistorySection from './components/HistorySection'
 import HistorySectionIncinerator, {
   frontmatter as incineratorSectionFrontmatter,
@@ -11,8 +12,9 @@ import HistorySectionOccupation, {
 const History = () => {
   return (
     <main className="inset-x-0 pb-6 pt-20 md:mb-40">
+      <ReturnButton path={ROUTES.HOME} />
       <div className="flex justify-center text-xl font-black">A História</div>
-      <section className="flex justify-around py-6">
+      <section className="flex flex-col justify-around py-6 md:flex-row">
         <HistorySection
           image={
             incineratorSectionFrontmatter.image ||

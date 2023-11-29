@@ -10,7 +10,7 @@ const SectionDetail: React.FC<SectionDetailProps> = ({
   alts,
 }) => {
   return (
-    <main className="flex flex-wrap p-4">
+    <main className="flex flex-wrap p-4 md:mb-40">
       <section className="flex flex-col items-center justify-center p-4 md:flex-row">
         <img className="h-52 w-52" src={images[0]} alt={alts[0]} />
         <div className="ml-4">{content[0]}</div>
