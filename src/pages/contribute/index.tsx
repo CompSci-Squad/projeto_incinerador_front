@@ -3,7 +3,7 @@ import { ROUTES } from '../../routes/pages-routes'
 
 const Contribute = () => {
   return (
-    <main className="inset-x-0 pb-6 pt-20 md:mb-40">
+    <main className="inset-x-0 pb-6 pt-20 md:mb-52">
       <ReturnButton path={ROUTES.HOME} />
       <h1 className="text-center text-xl font-bold">Apoie a Usina</h1>
       <section className="flex flex-col items-center justify-center gap-4 px-6 md:flex-row">
