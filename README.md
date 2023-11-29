@@ -1,27 +1,15 @@
-# React + TypeScript + Vite
+# Projeto Incinerador Vergueiro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Para Rodar o projeto localmente:
+### Pré-requisitos
+- ter Node.js versão 20 instalado
+- ter pnpm instalado
+---
 
-Currently, two official plugins are available:
+1. instalar dependencias: ```pnpm i```
+2. criar mock database: ```pnpm run populate```
+3. criar instância do mock-server em uma sessão do terminal: ```pnpm run mock-server```
+4. criar arquivo `.env.local` com a variavel de ambiente. Essa variavel é a url onde o mock-server está rodando
+5. rodar o projeto: ```pnpm run dev```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+---

@@ -21,7 +21,7 @@ const EventCard: React.FC<EventCardProps> = ({
   const day = dayjs(date).format('DD/MM/YYYY')
   const time = dayjs(date).format('HH:mm')
   return (
-    <div key={id} className="card m-4 shadow-xl">
+    <div key={id} className="card card-compact m-4 gap-2 py-4 shadow-xl">
       <figure>
         <img
           src={image}
@@ -30,7 +30,7 @@ const EventCard: React.FC<EventCardProps> = ({
           className="h-52 w-52 rounded-2xl"
         />
       </figure>
-      <div className="card-body gap-6">
+      <div className="flex flex-col items-center justify-center md:card-body md:gap-4">
         <h3 className="card-title">{title}</h3>
         <div className="flex gap-2">
           <span className="font-semibold">Descrição:</span>
@@ -42,7 +42,7 @@ const EventCard: React.FC<EventCardProps> = ({
             {day} {time}
           </span>
         </div>
-        <div className="card-actions justify-end">
+        <div className="justify-end md:card-actions">
           <Link
             to={ROUTES.EVENTS.DETAILS(id)}
             className="btn bg-eco_green text-eco_white hover:bg-eco_green_hover"
