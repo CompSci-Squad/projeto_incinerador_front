@@ -1,21 +1,14 @@
 const Banner = () => {
   return (
-    <div className="collapse rounded-none bg-eco_blue">
-      <input type="checkbox" />
-      <div className="collapse-title text-xl font-medium text-eco_white">
-        Assine nosso abaixo assinado clicando nesse banner
-      </div>
-      <div className="collapse-content">
-        <a
-          href="https://secure.avaaz.org/community_petitions/po/prefeitura_municipal_de_sao_paulo_eu_apoio_incinerador_vergueiro_devera_ser_um_espaco_de_conscientizacao_ambiental_e_vida/"
-          target="_blank"
-          className="link text-eco_white"
-        >
-          Eu apoio que o Incinerador Vergueiro se torne um centro cultural e
-          ambiental
-        </a>
-      </div>
-    </div>
+    <a
+      className="collapse rounded-none bg-eco_blue p-2 transition hover:bg-eco_blue_hover md:p-4"
+      href="https://secure.avaaz.org/community_petitions/po/prefeitura_municipal_de_sao_paulo_eu_apoio_incinerador_vergueiro_devera_ser_um_espaco_de_conscientizacao_ambiental_e_vida/"
+      target="_blank"
+    >
+      <h2 className="pt-2 text-center text-base font-medium text-eco_white md:text-xl">
+        Assine nosso abaixo assinado!
+      </h2>
+    </a>
   )
 }
 

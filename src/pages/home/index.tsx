@@ -1,5 +1,6 @@
 import { ROUTES } from '~/routes/pages-routes'
 
+import Banner from './components/Banner'
 import HomeSection from './components/HomeSection/'
 import CollectiveText, {
   frontmatter as collectiveFrontmatter,
@@ -27,65 +28,65 @@ import ContributeText, {
 } from './content/homeSupport.mdx'
 
 const Home = () => {
+  const sections = [
+    {
+      title: collectiveFrontmatter.title,
+      path: ROUTES.COLLECTIVE.HOME,
+      image: collectiveFrontmatter.image,
+      text: <CollectiveText />,
+    },
+    {
+      title: historyFrontmatter.title,
+      path: ROUTES.HISTORY.HOME,
+      image: historyFrontmatter.image,
+      text: <HistoryText />,
+    },
+    {
+      title: contributeFrontmatter.title,
+      path: ROUTES.CONTRIBUTE,
+      image: contributeFrontmatter.image,
+      text: <ContributeText />,
+    },
+    {
+      title: storeFrontmatter.title,
+      path: ROUTES.STORE.HOME,
+      image: storeFrontmatter.image,
+      text: <StoreText />,
+    },
+    {
+      title: eventFrontmatter.title,
+      path: ROUTES.EVENTS.HOME,
+      image: eventFrontmatter.image,
+      text: <EventText />,
+    },
+    {
+      title: newsFrontmatter.title,
+      path: ROUTES.NEWS,
+      image: newsFrontmatter.image,
+      text: <NewsText />,
+    },
+    {
+      title: contactFrontmatter.title,
+      path: ROUTES.CONTACT,
+      image: contactFrontmatter.image,
+      text: <ContactText />,
+    },
+    {
+      title: partnersFrontmatter.title,
+      path: ROUTES.PARTNERS,
+      image: partnersFrontmatter.image,
+      text: <PartnersText />,
+    },
+  ]
   return (
     <main className="inset-x-0 bottom-0 pt-16">
+      <Banner />
       <ul className="mx-4 md:grid md:grid-cols-4 md:grid-rows-2 md:gap-4 md:py-6">
-        <HomeSection
-          title={collectiveFrontmatter.title}
-          path={ROUTES.COLLECTIVE.HOME}
-          image={collectiveFrontmatter.image}
-        >
-          <CollectiveText />
-        </HomeSection>
-        <HomeSection
-          title={historyFrontmatter.title}
-          path={ROUTES.HISTORY.HOME}
-          image={historyFrontmatter.image}
-        >
-          <HistoryText />
-        </HomeSection>
-        <HomeSection
-          title={contributeFrontmatter.title}
-          path={ROUTES.CONTRIBUTE}
-          image={contributeFrontmatter.image}
-        >
-          <ContributeText />
-        </HomeSection>
-        <HomeSection
-          title={storeFrontmatter.title}
-          path={ROUTES.STORE.HOME}
-          image={storeFrontmatter.image}
-        >
-          <StoreText />
-        </HomeSection>
-        <HomeSection
-          title={eventFrontmatter.title}
-          path={ROUTES.EVENTS.HOME}
-          image={eventFrontmatter.image}
-        >
-          <EventText />
-        </HomeSection>
-        <HomeSection
-          title={newsFrontmatter.title}
-          path={ROUTES.NEWS}
-          image={newsFrontmatter.image}
-        >
-          <NewsText />
-        </HomeSection>
-        <HomeSection
-          title={contactFrontmatter.title}
-          path={ROUTES.CONTACT}
-          image={contactFrontmatter.image}
-        >
-          <ContactText />
-        </HomeSection>
-        <HomeSection
-          title={partnersFrontmatter.title}
-          path={ROUTES.PARTNERS}
-          image={partnersFrontmatter.image}
-        >
-          <PartnersText />
-        </HomeSection>
+        {sections.map(({ image, path, text, title }) => (
+          <HomeSection image={image} title={title} path={path} key={title}>
+            {text}
+          </HomeSection>
+        ))}
       </ul>
     </main>
   )
