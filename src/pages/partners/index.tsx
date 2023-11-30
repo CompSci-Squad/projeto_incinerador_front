@@ -1,4 +1,4 @@
-import SectionDetail from '~/components/SectionDetail'
+import SectionDetail, { SectionDetailProps } from '~/components/SectionDetail'
 
 import ReturnButton from '../../components/ReturnButton'
 import { ROUTES } from '../../routes/pages-routes'
@@ -43,63 +43,80 @@ import SectionPartnersContent13, {
 } from './content/ourSupports13.mdx'
 
 const PartnersPage = () => {
+  const content: Array<SectionDetailProps> = [
+    {
+      image: sectionPartnersContentFrontmatter.image,
+      content: <SectionPartnersContent />,
+      alt: sectionPartnersContentFrontmatter.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter2.image,
+      content: <SectionPartnersContent2 />,
+      alt: sectionPartnersContentFrontmatter2.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter3.image,
+      content: <SectionPartnersContent3 />,
+      alt: sectionPartnersContentFrontmatter3.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter4.image,
+      content: <SectionPartnersContent4 />,
+      alt: sectionPartnersContentFrontmatter4.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter5.image,
+      content: <SectionPartnersContent5 />,
+      alt: sectionPartnersContentFrontmatter5.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter6.image,
+      content: <SectionPartnersContent6 />,
+      alt: sectionPartnersContentFrontmatter6.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter7.image,
+      content: <SectionPartnersContent7 />,
+      alt: sectionPartnersContentFrontmatter7.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter8.image,
+      content: <SectionPartnersContent8 />,
+      alt: sectionPartnersContentFrontmatter8.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter9.image,
+      content: <SectionPartnersContent9 />,
+      alt: sectionPartnersContentFrontmatter9.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter10.alt,
+      content: <SectionPartnersContent10 />,
+      alt: sectionPartnersContentFrontmatter10.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter11.image,
+      content: <SectionPartnersContent11 />,
+      alt: sectionPartnersContentFrontmatter11.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter12.image,
+      content: <SectionPartnersContent12 />,
+      alt: sectionPartnersContentFrontmatter12.alt,
+    },
+    {
+      image: sectionPartnersContentFrontmatter13.image,
+      content: <SectionPartnersContent13 />,
+      alt: sectionPartnersContentFrontmatter13.alt,
+    },
+  ]
   return (
     <main className="inset-x-0 bottom-0 pb-6 pt-20">
       <ReturnButton path={ROUTES.HOME} />
       <h1 className="flex justify-center text-xl font-black">
         {sectionPartnersContentFrontmatter.title}
       </h1>
-      <SectionDetail
-        images={
-          [
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-          ] ?? ['']
-        }
-        content={[
-          <SectionPartnersContent key={1} />,
-          <SectionPartnersContent2 key={2} />,
-          <SectionPartnersContent3 key={3} />,
-          <SectionPartnersContent4 key={4} />,
-          <SectionPartnersContent5 key={5} />,
-          <SectionPartnersContent6 key={6} />,
-          <SectionPartnersContent7 key={7} />,
-          <SectionPartnersContent8 key={8} />,
-          <SectionPartnersContent9 key={9} />,
-          <SectionPartnersContent10 key={10} />,
-          <SectionPartnersContent11 key={11} />,
-          <SectionPartnersContent12 key={12} />,
-          <SectionPartnersContent13 key={13} />,
-        ]}
-        alts={
-          [
-            sectionPartnersContentFrontmatter.alt,
-            sectionPartnersContentFrontmatter2.alt,
-            sectionPartnersContentFrontmatter3.alt,
-            sectionPartnersContentFrontmatter4.alt,
-            sectionPartnersContentFrontmatter5.alt,
-            sectionPartnersContentFrontmatter6.alt,
-            sectionPartnersContentFrontmatter7.alt,
-            sectionPartnersContentFrontmatter8.alt,
-            sectionPartnersContentFrontmatter9.alt,
-            sectionPartnersContentFrontmatter10.alt,
-            sectionPartnersContentFrontmatter11.alt,
-            sectionPartnersContentFrontmatter12.alt,
-            sectionPartnersContentFrontmatter13.alt,
-          ] ?? ['']
-        }
-      />
+      <SectionDetail arr={content} />
     </main>
   )
 }
