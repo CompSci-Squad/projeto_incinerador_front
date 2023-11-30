@@ -1,9 +1,11 @@
+import Banner from '../../components/Banner'
 import ReturnButton from '../../components/ReturnButton'
 import { ROUTES } from '../../routes/pages-routes'
 
 const Contribute = () => {
   return (
-    <main className="inset-x-0 pb-6 pt-20 md:mb-52">
+    <main className="inset-x-0 pb-6 pt-16 md:mb-52">
+      <Banner />
       <ReturnButton path={ROUTES.HOME} />
       <h1 className="text-center text-xl font-bold">Apoie a Usina</h1>
       <section className="flex flex-col items-center justify-center gap-4 px-6 md:flex-row">
