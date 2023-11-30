@@ -1,6 +1,6 @@
 import { ROUTES } from '~/routes/pages-routes'
 
-import Banner from './components/Banner'
+import Banner from '../../components/Banner'
 import HomeSection from './components/HomeSection/'
 import CollectiveText, {
   frontmatter as collectiveFrontmatter,

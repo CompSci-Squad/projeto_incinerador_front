@@ -22,6 +22,7 @@ const LinkHeader: React.FC<LinkHeaderProps> = ({ path, title }) => {
         py-1
         px-2
         text-sm
+        md:text-base
       ${
         location.pathname.includes(path)
           ? 'bg-eco_blue text-eco_white hover:bg-sky-700'

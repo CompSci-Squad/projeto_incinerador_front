@@ -65,6 +65,7 @@ const Header = () => {
               hover:bg-eco_blue_hover
               md:my-0
               md:ml-10
+              md:text-base
         "
             >
               <a
