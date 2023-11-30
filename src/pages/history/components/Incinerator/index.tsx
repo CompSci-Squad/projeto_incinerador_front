@@ -1,5 +1,5 @@
 import ReturnButton from '~/components/ReturnButton'
-import SectionDetail from '~/components/SectionDetail'
+import SectionDetail, { SectionDetailProps } from '~/components/SectionDetail'
 import { ROUTES } from '~/routes/pages-routes'
 
 import SectionIncineratorContent, {
@@ -12,34 +12,31 @@ import SectionIncineratorContent3, {
 import SectionIncineratorContent4 from '../../content/incinerator/historyIncinerator4.mdx'
 
 const Incinerator = () => {
+  const content: Array<SectionDetailProps> = [
+    {
+      image: sectionIncineratorContentFrontmatter.image,
+      content: <SectionIncineratorContent />,
+      alt: sectionIncineratorContentFrontmatter.alt,
+    },
+    {
+      content: <SectionIncineratorContent2 />,
+    },
+    {
+      image: sectionIncineratorContent3Frontmatter.image,
+      content: <SectionIncineratorContent3 />,
+      alt: sectionIncineratorContentFrontmatter.alt,
+    },
+    {
+      content: <SectionIncineratorContent4 />,
+    },
+  ]
   return (
     <main className="inset-x-0 bottom-0 pb-6 pt-20 md:mb-40">
       <ReturnButton path={ROUTES.HISTORY.HOME} />
       <h1 className="flex justify-center text-xl font-black">
         {sectionIncineratorContentFrontmatter.title}
       </h1>
-      <SectionDetail
-        images={
-          [
-            sectionIncineratorContentFrontmatter.image,
-            undefined,
-            sectionIncineratorContent3Frontmatter.image,
-          ] ?? ['']
-        }
-        content={[
-          <SectionIncineratorContent key={1} />,
-          <SectionIncineratorContent2 key={2} />,
-          <SectionIncineratorContent3 key={3} />,
-          <SectionIncineratorContent4 key={4} />,
-        ]}
-        alts={
-          [
-            sectionIncineratorContentFrontmatter.alt,
-            undefined,
-            sectionIncineratorContent3Frontmatter.alt,
-          ] ?? ['']
-        }
-      />
+      <SectionDetail arr={content} />
     </main>
   )
 }

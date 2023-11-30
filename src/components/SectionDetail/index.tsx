@@ -9,6 +9,9 @@ export interface SectionDetailProps {
 }
 
 const SectionDetail: React.FC<SectionDetailsArr> = ({ arr }) => {
+  const addImageFallback = (event: { currentTarget: { src: string } }) => {
+    event.currentTarget.src = '/images/cachorro_arabe.jpeg'
+  }
   return (
     <main className="flex flex-wrap p-4 pb-0 md:mb-40">
       {arr.map(({ image, alt, content }) =>
@@ -21,6 +24,7 @@ const SectionDetail: React.FC<SectionDetailsArr> = ({ arr }) => {
               className="h-24 w-24 rounded-2xl md:h-52 md:w-52"
               src={image}
               alt={alt}
+              onError={addImageFallback}
             />
             <div className="ml-4">{content}</div>
           </section>
