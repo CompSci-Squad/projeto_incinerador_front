@@ -13,14 +13,14 @@ const LinkHeader: React.FC<LinkHeaderProps> = ({ path, title }) => {
     <li
       className={twMerge(
         `
-        rounded-2xl
+        rounded-xl
         border-none
-        my-7
+        my-4
         md:my-0
         md:ml-8
         text-center
         py-1
-        px-3
+        px-2
         text-sm
       ${
         location.pathname.includes(path)
