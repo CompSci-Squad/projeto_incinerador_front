@@ -43,9 +43,9 @@ const json = {
       description:
         'Disponível para todos os celulares lançados oficialmente no Brasil após 2019, 100% de silicone aveludada por dentro, anti queda e com a imagem do Incinerador Vergueiro, para você espalhar sua beleza onde você for!',
       images: [
-        '/images/capinhaincinerador1.jpg',
-        '/images/capinhaincinerador2.jpg',
-        '/images/capinhaincinerador3.jpg',
+        '/images/capinhaIncinerador1.jpg',
+        '/images/capinhaIncinerador2.jpg',
+        '/images/capinhaIncinerador3.jpg',
       ],
     },
     {
@@ -67,9 +67,9 @@ const json = {
       description:
         'Anti derrapante, alta durabilidade e com lindas fotos do nosso querido Incinerador Vergueiro.',
       images: [
-        '/images/mousePadIncinerador1.jpg',
-        '/images/mousePadIncinerador2.jpg',
-        '/images/mousePadIncinerador3.jpg',
+        '/images/mousepadIncinerador1.jpg',
+        '/images/mousepadIncinerador2.jpg',
+        '/images/mousepadIncinerador3.jpg',
       ],
     },
     {
@@ -115,9 +115,9 @@ const json = {
       description:
         'Disponível para todos os celulares lançados oficialmente no Brasil após 2019, 100% de silicone aveludada por dentro, anti queda e com a imagem do Incinerador Vergueiro, para você espalhar sua beleza onde você for!',
       images: [
-        '/images/capinhaincinerador1.jpg',
-        '/images/capinhaincinerador2.jpg',
-        '/images/capinhaincinerador3.jpg',
+        '/images/capinhaIncinerador1.jpg',
+        '/images/capinhaIncinerador2.jpg',
+        '/images/capinhaIncinerador3.jpg',
       ],
     },
     {
@@ -139,9 +139,9 @@ const json = {
       description:
         'Anti derrapante, alta durabilidade e com lindas fotos do nosso querido Incinerador Vergueiro.',
       images: [
-        '/images/mousePadIncinerador1.jpg',
-        '/images/mousePadIncinerador2.jpg',
-        '/images/mousePadIncinerador3.jpg',
+        '/images/mousepadIncinerador1.jpg',
+        '/images/mousepadIncinerador2.jpg',
+        '/images/mousepadIncinerador3.jpg',
       ],
     },
     {
@@ -187,9 +187,9 @@ const json = {
       description:
         'Disponível para todos os celulares lançados oficialmente no Brasil após 2019, 100% de silicone aveludada por dentro, anti queda e com a imagem do Incinerador Vergueiro, para você espalhar sua beleza onde você for!',
       images: [
-        '/images/capinhaincinerador1.jpg',
-        '/images/capinhaincinerador2.jpg',
-        '/images/capinhaincinerador3.jpg',
+        '/images/capinhaIncinerador1.jpg',
+        '/images/capinhaIncinerador2.jpg',
+        '/images/capinhaIncinerador3.jpg',
       ],
     },
     {
@@ -211,9 +211,9 @@ const json = {
       description:
         'Anti derrapante, alta durabilidade e com lindas fotos do nosso querido Incinerador Vergueiro.',
       images: [
-        '/images/mousePadIncinerador1.jpg',
-        '/images/mousePadIncinerador2.jpg',
-        '/images/mousePadIncinerador3.jpg',
+        '/images/mousepadIncinerador1.jpg',
+        '/images/mousepadIncinerador2.jpg',
+        '/images/mousepadIncinerador3.jpg',
       ],
     },
     {
