@@ -1,5 +1,6 @@
 import { ROUTES } from '~/routes/pages-routes'
 
+import ReturnButton from '../../components/ReturnButton'
 import CollectiveSection from './components/CollectiveSection'
 import CollectiveSectionGrow, {
   frontmatter as growSectionFrontmatter,
@@ -25,6 +26,7 @@ const Collective = () => {
   ]
   return (
     <main className="inset-x-0 pb-6 pt-20 md:mb-52">
+      <ReturnButton path={ROUTES.HOME} />
       <div className="inset-x-0 bottom-0 flex justify-center pb-6 pt-20 text-xl font-black">
         O Coletivo
       </div>
