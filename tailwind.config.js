@@ -11,6 +11,9 @@ export default {
         eco_white: '#ECECEC',
       },
     },
+    fontFamily: {
+      sans: ['BR Shape', 'sans-serif'],
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {

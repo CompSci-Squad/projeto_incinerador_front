@@ -1,5 +1,8 @@
+import { twMerge } from 'tailwind-merge'
+
 interface SectionDetailsArr {
   arr: SectionDetailProps[]
+  className?: string
 }
 
 export interface SectionDetailProps {
@@ -8,7 +11,7 @@ export interface SectionDetailProps {
   alt?: string
 }
 
-const SectionDetail: React.FC<SectionDetailsArr> = ({ arr }) => {
+const SectionDetail: React.FC<SectionDetailsArr> = ({ arr, className }) => {
   const addImageFallback = (event: { currentTarget: { src: string } }) => {
     event.currentTarget.src = '/images/cachorro_arabe.jpeg'
   }
@@ -18,7 +21,10 @@ const SectionDetail: React.FC<SectionDetailsArr> = ({ arr }) => {
         image ? (
           <section
             key={alt}
-            className="flex flex-col items-center justify-center p-4 md:flex-row"
+            className={twMerge(
+              `flex flex-col items-center justify-center p-4 md:flex-row`,
+              className,
+            )}
           >
             <img
               className="h-24 w-24 rounded-2xl md:h-52 md:w-52"
@@ -31,7 +37,10 @@ const SectionDetail: React.FC<SectionDetailsArr> = ({ arr }) => {
         ) : (
           <section
             key={alt}
-            className="flex flex-col items-center justify-center p-4 md:flex-row"
+            className={twMerge(
+              `flex flex-col items-center justify-center p-4 md:flex-row`,
+              className,
+            )}
           >
             <div className="ml-4">{content}</div>
           </section>
