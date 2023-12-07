@@ -12,7 +12,7 @@ export default {
       },
     },
     fontFamily: {
-      sans: ['BR Shape', 'sans-serif'],
+      sans: ['PT Serif', 'sans-serif'],
     },
   },
   plugins: [require('daisyui')],
